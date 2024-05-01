@@ -1,0 +1,6 @@
+﻿services:
+  codebattleservice:
+    image: codebattleservice
+    build:
+      context: .
+      dockerfile: codeBattleService/Dockerfile
