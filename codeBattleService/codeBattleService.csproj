@@ -17,4 +17,9 @@
       </Content>
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="src\DataAccessLayer\" />
+      <Folder Include="src\PresentationLayer\Properties\" />
+    </ItemGroup>
+
 </Project>
