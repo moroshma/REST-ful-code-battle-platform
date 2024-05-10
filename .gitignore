@@ -339,13 +339,14 @@ tasks.json
 .idea/
 *.sln.iml
 
-BuisnessLogicLayer/obj/
-BuisnessLogicLayer/bin/
-DataAccessLayer/obj/
-DataAccessLayer/bin/
-PresentationLayer/obj/
-PresentationLayer/bin/
-InfrastructureLayer/obj/
-InfrastructureLayer/bin/
+BuisnessLogicLayer/obj
+BuisnessLogicLayer/bin
+DataAccessLayer/obj
+DataAccessLayer/bin
+PresentationLayer/obj
+PresentationLayer/bin
+InfrastructureLayer/obj
+InfrastructureLayer/bin
+
 
 
