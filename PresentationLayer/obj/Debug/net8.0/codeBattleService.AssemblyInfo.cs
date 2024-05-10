@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("codeBattleService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+330fdac4e136e250408fcc33be9b10509d947f5f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7b9c7cd8272205202db05ef54f0eb2b69fa771c6")]
 [assembly: System.Reflection.AssemblyProductAttribute("codeBattleService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("codeBattleService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

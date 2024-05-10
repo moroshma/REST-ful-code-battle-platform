@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "codeBattleService", "codeBattleService\codeBattleService.csproj", "{ECB6AF39-9660-421D-B6A2-5D9DF4C153F2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PresentationLayer", "PresentationLayer\PresentationLayer.csproj", "{ECB6AF39-9660-421D-B6A2-5D9DF4C153F2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B451E115-73A6-4786-8312-A67F874C167A}"
 	ProjectSection(SolutionItems) = preProject
@@ -8,6 +8,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructeres", "Infrastructeres\Infrastructeres.csproj", "{D94EE60C-C492-4145-A5E7-520E5AD5BE7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuisnessLogicLayer", "BuisnessLogicLayer\BuisnessLogicLayer.csproj", "{F700E2B0-A961-471D-865B-6362A98DD25A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{92D528E1-D250-4BFA-A934-19F66E085EB9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +27,14 @@ Global
 		{D94EE60C-C492-4145-A5E7-520E5AD5BE7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D94EE60C-C492-4145-A5E7-520E5AD5BE7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D94EE60C-C492-4145-A5E7-520E5AD5BE7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F700E2B0-A961-471D-865B-6362A98DD25A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F700E2B0-A961-471D-865B-6362A98DD25A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F700E2B0-A961-471D-865B-6362A98DD25A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F700E2B0-A961-471D-865B-6362A98DD25A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92D528E1-D250-4BFA-A934-19F66E085EB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92D528E1-D250-4BFA-A934-19F66E085EB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92D528E1-D250-4BFA-A934-19F66E085EB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92D528E1-D250-4BFA-A934-19F66E085EB9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection

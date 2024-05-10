@@ -5,6 +5,7 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <RootNamespace>codeBattleService</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
@@ -18,8 +19,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="src\DataAccessLayer\" />
-      <Folder Include="src\PresentationLayer\Properties\" />
+      <ProjectReference Include="..\BuisnessLogicLayer\BuisnessLogicLayer.csproj" />
     </ItemGroup>
 
 </Project>

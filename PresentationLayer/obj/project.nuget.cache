@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "z4Zq46DT2aGnmIYJeJfFLwqCaM92VcB6jxMRgGmo8gO/DgObW++SaPqw/Vylv5qM0bRzmv0ZOXAytySA1ezwqw==",
+  "dgSpecHash": "zAT0UA1gMbtbCd8BiMWbvKJkER1iIdEReCKOGeuwgNdJPI1DfngOvcNou5t76qEf9DY1WAJbMWtdYycePM88VQ==",
   "success": true,
-  "projectFilePath": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/codeBattleService/codeBattleService.csproj",
+  "projectFilePath": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/PresentationLayer/PresentationLayer.csproj",
   "expectedPackageFiles": [
     "/home/moroshma/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "/home/moroshma/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
