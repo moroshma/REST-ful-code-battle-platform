@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "z0c2Dr+6FLH1p7VcqvM9+16l62aZupc2EbxtaVV+cibFN5yVGgXOTyuwkpWPaP8BEgKNs9kQAcDJKQ2+2L5j0Q==",
+  "success": true,
+  "projectFilePath": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/Infrastructure/Infrastructure.csproj",
+  "expectedPackageFiles": [
+    "/home/moroshma/.nuget/packages/bcrypt.net-next/4.0.3/bcrypt.net-next.4.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
