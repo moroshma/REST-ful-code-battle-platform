@@ -1,0 +1,12 @@
+C:\Users\Maks\Desktop\REST-ful-code-battle-platform\BuisnessLogicLayer\bin\Debug\net8.0\BuisnessLogicLayer.deps.json
+C:\Users\Maks\Desktop\REST-ful-code-battle-platform\BuisnessLogicLayer\bin\Debug\net8.0\BuisnessLogicLayer.dll
+C:\Users\Maks\Desktop\REST-ful-code-battle-platform\BuisnessLogicLayer\bin\Debug\net8.0\BuisnessLogicLayer.pdb
+C:\Users\Maks\Desktop\REST-ful-code-battle-platform\BuisnessLogicLayer\obj\Debug\net8.0\BuisnessLogicLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Maks\Desktop\REST-ful-code-battle-platform\BuisnessLogicLayer\obj\Debug\net8.0\BuisnessLogicLayer.AssemblyInfoInputs.cache
+C:\Users\Maks\Desktop\REST-ful-code-battle-platform\BuisnessLogicLayer\obj\Debug\net8.0\BuisnessLogicLayer.AssemblyInfo.cs
+C:\Users\Maks\Desktop\REST-ful-code-battle-platform\BuisnessLogicLayer\obj\Debug\net8.0\BuisnessLogicLayer.csproj.CoreCompileInputs.cache
+C:\Users\Maks\Desktop\REST-ful-code-battle-platform\BuisnessLogicLayer\obj\Debug\net8.0\BuisnessLogicLayer.sourcelink.json
+C:\Users\Maks\Desktop\REST-ful-code-battle-platform\BuisnessLogicLayer\obj\Debug\net8.0\BuisnessLogicLayer.dll
+C:\Users\Maks\Desktop\REST-ful-code-battle-platform\BuisnessLogicLayer\obj\Debug\net8.0\refint\BuisnessLogicLayer.dll
+C:\Users\Maks\Desktop\REST-ful-code-battle-platform\BuisnessLogicLayer\obj\Debug\net8.0\BuisnessLogicLayer.pdb
+C:\Users\Maks\Desktop\REST-ful-code-battle-platform\BuisnessLogicLayer\obj\Debug\net8.0\ref\BuisnessLogicLayer.dll

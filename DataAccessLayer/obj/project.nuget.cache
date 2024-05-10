@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qvTJkLy+zW1ut/HDpPVyiW2kX4nI5Tvr8s4zHe/LHKRIYUqMApDIteNGaXTqHfnHIuZdRabapEtDENoweSR4gg==",
+  "dgSpecHash": "JSSpShrlPTpxiXuzxcsVWyPQHzVTa2bkZmo5T8If6Awjv6OnsCMkZ0yCCddyraz7gCZfx1ZNvJ6fjGBfaHfJWQ==",
   "success": true,
-  "projectFilePath": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/DataAccessLayer/DataAccessLayer.csproj",
+  "projectFilePath": "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\DataAccessLayer\\DataAccessLayer.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DGuGxuEGIM945eJiAyzRmucufYtU1Y4lxiUkLiNDSwl72SUBl20sThHIREtl3xTCiI0+X0mB428UNyyBdXw2mg==",
+  "dgSpecHash": "cgtX6bo8tVW/tvCD1FocfXoYsk/Ht81nCybApbu8p4wLwmrla3FCWOJwcmiIVl+yNTpfXeP11CtJrdxudvkviQ==",
   "success": true,
-  "projectFilePath": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/BuisnessLogicLayer/BuisnessLogicLayer.csproj",
+  "projectFilePath": "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\BuisnessLogicLayer\\BuisnessLogicLayer.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

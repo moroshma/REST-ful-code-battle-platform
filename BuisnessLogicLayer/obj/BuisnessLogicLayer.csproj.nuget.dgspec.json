@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/BuisnessLogicLayer/BuisnessLogicLayer.csproj": {}
+    "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\BuisnessLogicLayer\\BuisnessLogicLayer.csproj": {}
   },
   "projects": {
-    "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/BuisnessLogicLayer/BuisnessLogicLayer.csproj": {
+    "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\BuisnessLogicLayer\\BuisnessLogicLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/BuisnessLogicLayer/BuisnessLogicLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\BuisnessLogicLayer\\BuisnessLogicLayer.csproj",
         "projectName": "BuisnessLogicLayer",
-        "projectPath": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/BuisnessLogicLayer/BuisnessLogicLayer.csproj",
-        "packagesPath": "/home/moroshma/.nuget/packages/",
-        "outputPath": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/BuisnessLogicLayer/obj/",
+        "projectPath": "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\BuisnessLogicLayer\\BuisnessLogicLayer.csproj",
+        "packagesPath": "C:\\Users\\Maks\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\BuisnessLogicLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/moroshma/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Maks\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -53,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/moroshma/.dotnet/sdk/8.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

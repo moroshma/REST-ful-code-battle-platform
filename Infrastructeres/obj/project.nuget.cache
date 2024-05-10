@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "svfrrbi0F45VGrICYLCepbWww+hX9wAQMck7EsvyvYZhezebMeWB9S3A9/cdET60CuvZKwJtAR7zelUdoD7brw==",
+  "dgSpecHash": "zfJ34iaj11HFGbzZJCmCtjPgU2SZ6jv1XsRvxyUdQL7f/7U6iS4PuF/5kQ85BPyi+435fqzkjHF/ZYHPL3+A2A==",
   "success": true,
-  "projectFilePath": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/Infrastructeres/Infrastructeres.csproj",
+  "projectFilePath": "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\Infrastructeres\\Infrastructeres.csproj",
   "expectedPackageFiles": [
-    "/home/moroshma/.nuget/packages/bcrypt.net-next/4.0.3/bcrypt.net-next.4.0.3.nupkg.sha512"
+    "C:\\Users\\Maks\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512"
   ],
   "logs": []
 }
