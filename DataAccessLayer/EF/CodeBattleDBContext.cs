@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using  Npgsql.EntityFrameworkCore.PostgreSQL;
 using DataAccessLayer.Models;
+using SecretStore.DataAccess.Models;
 
 namespace DataAccessLayer.EF
 {
@@ -24,6 +25,8 @@ namespace DataAccessLayer.EF
             
         }
         public DbSet<User> Users { get; set; }
+        
+        public DbSet<TokensDb> Tokens { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
