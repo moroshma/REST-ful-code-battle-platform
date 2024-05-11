@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\PresentationLayer\\PresentationLayer.csproj": {}
+    "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/PresentationLayer/PresentationLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\BuisnessLogicLayer\\BuisnessLogicLayer.csproj": {
+    "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/BuisnessLogicLayer/BuisnessLogicLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\BuisnessLogicLayer\\BuisnessLogicLayer.csproj",
+        "projectUniqueName": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/BuisnessLogicLayer/BuisnessLogicLayer.csproj",
         "projectName": "BuisnessLogicLayer",
-        "projectPath": "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\BuisnessLogicLayer\\BuisnessLogicLayer.csproj",
-        "packagesPath": "C:\\Users\\Maks\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\BuisnessLogicLayer\\obj\\",
+        "projectPath": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/BuisnessLogicLayer/BuisnessLogicLayer.csproj",
+        "packagesPath": "/home/moroshma/.nuget/packages/",
+        "outputPath": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/BuisnessLogicLayer/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Maks\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/moroshma/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -34,11 +32,30 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.5.0-preview2-24180-01, )"
+            },
+            "Microsoft.EntityFrameworkCore.Abstractions": {
+              "target": "Package",
+              "version": "[9.0.0-preview.3.24172.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Analyzers": {
+              "target": "Package",
+              "version": "[9.0.0-preview.3.24172.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -55,28 +72,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/moroshma/.dotnet/sdk/8.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\DataAccessLayer\\DataAccessLayer.csproj": {
+    "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/DataAccessLayer/DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectUniqueName": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/DataAccessLayer/DataAccessLayer.csproj",
         "projectName": "DataAccessLayer",
-        "projectPath": "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\DataAccessLayer\\DataAccessLayer.csproj",
-        "packagesPath": "C:\\Users\\Maks\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\DataAccessLayer\\obj\\",
+        "projectPath": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/DataAccessLayer/DataAccessLayer.csproj",
+        "packagesPath": "/home/moroshma/.nuget/packages/",
+        "outputPath": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/DataAccessLayer/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Maks\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/moroshma/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -89,13 +104,36 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "Microsoft.EntityFrameworkCore": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.5.0-preview2-24180-01, )"
+            },
+            "Microsoft.EntityFrameworkCore.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Analyzers": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.4, )"
             },
@@ -104,6 +142,22 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.4, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[9.0.0-preview.3.24172.9, )"
+            },
+            "Microsoft.Extensions.Configuration.FileExtensions": {
+              "target": "Package",
+              "version": "[9.0.0-preview.3.24172.9, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[9.0.0-preview.3.24172.9, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[8.0.3, )"
             },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
@@ -126,39 +180,37 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/moroshma/.dotnet/sdk/8.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\PresentationLayer\\PresentationLayer.csproj": {
+    "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/PresentationLayer/PresentationLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\PresentationLayer\\PresentationLayer.csproj",
+        "projectUniqueName": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/PresentationLayer/PresentationLayer.csproj",
         "projectName": "PresentationLayer",
-        "projectPath": "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\PresentationLayer\\PresentationLayer.csproj",
-        "packagesPath": "C:\\Users\\Maks\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\PresentationLayer\\obj\\",
+        "projectPath": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/PresentationLayer/PresentationLayer.csproj",
+        "packagesPath": "/home/moroshma/.nuget/packages/",
+        "outputPath": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/PresentationLayer/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Maks\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/moroshma/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\BuisnessLogicLayer\\BuisnessLogicLayer.csproj": {
-                "projectPath": "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\BuisnessLogicLayer\\BuisnessLogicLayer.csproj"
+              "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/BuisnessLogicLayer/BuisnessLogicLayer.csproj": {
+                "projectPath": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/BuisnessLogicLayer/BuisnessLogicLayer.csproj"
               },
-              "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\DataAccessLayer\\DataAccessLayer.csproj": {
-                "projectPath": "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\DataAccessLayer\\DataAccessLayer.csproj"
+              "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/DataAccessLayer/DataAccessLayer.csproj": {
+                "projectPath": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/DataAccessLayer/DataAccessLayer.csproj"
               }
             }
           }
@@ -167,15 +219,32 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.5.0-preview2-24180-01, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Abstractions": {
+              "target": "Package",
+              "version": "[9.0.0-preview.3.24172.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Analyzers": {
+              "target": "Package",
+              "version": "[9.0.0-preview.3.24172.4, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -221,7 +290,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/moroshma/.dotnet/sdk/8.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
