@@ -1,6 +1,14 @@
+using BusinessLogicLayer;
+using DataAccessLayer.EF;
+using Microsoft.AspNetCore.Authentication.OAuth;
+using Microsoft.EntityFrameworkCore;
+using Npgsql;
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddDbContext<CodeBattleDBContext>(opt => opt.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnetction")));
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
