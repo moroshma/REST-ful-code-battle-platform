@@ -1227,8 +1227,7 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 
 
-Infrastructure/obj/*
-DataAccessLayer/obj/*
-BuisnessLogicLayer/obj/*
-
-
+/Infrastructeres/obj/Debug/net8.0/*
+/BuisnessLogicLayer/obj/Debug/net8.0/*
+/DataAccessLayer/obj/Debug/net8.0/*
+/ServiceLayer/obj/Debug/net8.0/*
