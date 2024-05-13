@@ -1,0 +1,13 @@
+C:\Users\Maks\Desktop\REST-ful-code-battle-platform\Infrastructeres\bin\Debug\net8.0\Infrastructeres.deps.json
+C:\Users\Maks\Desktop\REST-ful-code-battle-platform\Infrastructeres\bin\Debug\net8.0\Infrastructeres.dll
+C:\Users\Maks\Desktop\REST-ful-code-battle-platform\Infrastructeres\bin\Debug\net8.0\Infrastructeres.pdb
+C:\Users\Maks\Desktop\REST-ful-code-battle-platform\Infrastructeres\obj\Debug\net8.0\Infrastructeres.csproj.AssemblyReference.cache
+C:\Users\Maks\Desktop\REST-ful-code-battle-platform\Infrastructeres\obj\Debug\net8.0\Infrastructeres.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Maks\Desktop\REST-ful-code-battle-platform\Infrastructeres\obj\Debug\net8.0\Infrastructeres.AssemblyInfoInputs.cache
+C:\Users\Maks\Desktop\REST-ful-code-battle-platform\Infrastructeres\obj\Debug\net8.0\Infrastructeres.AssemblyInfo.cs
+C:\Users\Maks\Desktop\REST-ful-code-battle-platform\Infrastructeres\obj\Debug\net8.0\Infrastructeres.csproj.CoreCompileInputs.cache
+C:\Users\Maks\Desktop\REST-ful-code-battle-platform\Infrastructeres\obj\Debug\net8.0\Infrastructeres.sourcelink.json
+C:\Users\Maks\Desktop\REST-ful-code-battle-platform\Infrastructeres\obj\Debug\net8.0\Infrastructeres.dll
+C:\Users\Maks\Desktop\REST-ful-code-battle-platform\Infrastructeres\obj\Debug\net8.0\refint\Infrastructeres.dll
+C:\Users\Maks\Desktop\REST-ful-code-battle-platform\Infrastructeres\obj\Debug\net8.0\Infrastructeres.pdb
+C:\Users\Maks\Desktop\REST-ful-code-battle-platform\Infrastructeres\obj\Debug\net8.0\ref\Infrastructeres.dll
