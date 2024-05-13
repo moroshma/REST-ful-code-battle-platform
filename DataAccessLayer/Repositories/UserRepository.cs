@@ -32,7 +32,12 @@ namespace DataAccessLayer.Ropositories
             if (deletedUser == null) new EntryNotFoundException($"Entity {typeof(User).Name} not found!");
             else db.Users.Remove(deletedUser);
         }
-        
+
+        public IEnumerable<User> FindActiveNearElo(int elo, int range)
+        {
+            return db.Users.FromSqlRaw("SELECT * FROM Users WHERE Elo BETWEEN {0} AND {1}", elo - range, elo + range);
+        }
+
         public User Get(string id)
         {
             var user = db.Users.Find(id);

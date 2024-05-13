@@ -12,6 +12,7 @@ namespace DataAccessLayer.Interfaces
     
     public interface IUserRepository : IRepository<User>
     {
-        
+        IEnumerable<User> FindActiveNearElo(int elo, int range);
+
     }
 }
