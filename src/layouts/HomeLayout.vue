@@ -6,7 +6,7 @@ import { throttle } from '@/helpers/throttle'
 
 const mouseEvent = ref<MouseEvent>()
 
-const throttleUpdateMouseEvent = throttle(updateMouseEvent,200)
+const throttleUpdateMouseEvent = throttle(updateMouseEvent,100)
 
 function updateMouseEvent(event:MouseEvent){
     mouseEvent.value = event
