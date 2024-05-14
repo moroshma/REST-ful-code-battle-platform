@@ -20,16 +20,15 @@ const activeTabIndex = ref<number>(0)
 
 const headerButtons = ref([
     {
-        text: 'Profile',
-        type: 'primary',
-        component: shallowRef(ProfileView)
-    },
-    {
         text: 'Battles',
         type: 'danger',
         component: shallowRef(BattlesView)
     },
-
+    {
+        text: 'Profile',
+        type: 'primary',
+        component: shallowRef(ProfileView)
+    },
 ])
 
 watchEffect(() => {
@@ -82,7 +81,7 @@ function setBoxShadowStyle(obj: IBoxShadow): void {
     <header>
         <nav :style="{ 'box-shadow': boxShadowStyle }">
             <ul>
-                <li v-for="(button, index) in headerButtons" :key="index">
+                <li v-for="(button, index) in headerButtons" :key="button.type + button.text">
                     <el-button :type="button.type" :round="activeTabIndex === index" @click="replaceActiveTab(index)">
                         {{ button.text }}
                     </el-button>
@@ -111,7 +110,7 @@ header nav {
     margin: 0 auto;
     display: flex;
     height: 60px;
-    background-color: rgb(75, 25, 70);
+    background-color: var(--general-style);
 }
 
 header ul {

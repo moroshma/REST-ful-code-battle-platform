@@ -1,3 +1,10 @@
+<script setup lang="ts">
+    import BattleCard from '@/components/battles/BattleCard.vue'
+</script>
+
+
 <template>
-    battles
+    <div>
+        <BattleCard/>
+    </div>
 </template>

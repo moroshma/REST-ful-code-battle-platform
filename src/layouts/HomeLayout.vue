@@ -21,7 +21,9 @@ function replaceActiveTab(component:any){
 <template>
     <div class="container" @mousemove="throttleUpdateMouseEvent">
         <HeaderView :onSwitch-view="replaceActiveTab" :mouseEvent = "mouseEvent"/>
-        <component :is="activeView"/>
+        <div style="padding-top: 100px;">
+            <component :is="activeView"/>
+        </div>
         <FooterView/>
     </div>
 </template>
