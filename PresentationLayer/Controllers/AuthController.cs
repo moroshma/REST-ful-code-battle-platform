@@ -21,10 +21,10 @@ public class AuthController : Controller
     [Route("Register")]
     public async Task<IActionResult> Register([FromBody] RegisterForm registerForm)
     {
-        var req = _userService.Add(registerForm.UserName, registerForm.Email, registerForm.Password);
+        var req = await _userService.Add(registerForm.UserName, registerForm.Email, registerForm.Password);
         return Ok(new
         {
-            UserId = req.Result,
+            UserId = req
         });
     }
 
