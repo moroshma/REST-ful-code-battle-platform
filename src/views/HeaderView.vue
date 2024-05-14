@@ -1,6 +1,10 @@
 <script setup lang="ts">
-import { computed, ref, watchEffect } from 'vue';
+import { computed, ref, shallowRef, watchEffect } from 'vue';
 import type { IBoxShadow, IMouseCoords } from '@/interfaces/homePage/interfaces'
+import BattlesView from '@/views/BattlesView.vue'
+import ProfileView from '@/views/ProfileView.vue'
+
+const emit = defineEmits(['switch-view'])
 
 const props = defineProps({
     mouseEvent: {
@@ -16,13 +20,16 @@ const activeTabIndex = ref<number>(0)
 
 const headerButtons = ref([
     {
-        text: 'Battles',
-        type: 'danger',
+        text: 'Profile',
+        type: 'primary',
+        component: shallowRef(ProfileView)
     },
     {
-        text: 'Profile',
-        type: 'primary'
-    }
+        text: 'Battles',
+        type: 'danger',
+        component: shallowRef(BattlesView)
+    },
+
 ])
 
 watchEffect(() => {
@@ -30,6 +37,16 @@ watchEffect(() => {
 
     setBoxShadowStyle(getBoxShadowStyle(coords))
 })
+
+watchEffect(() => {
+    replaceActiveTab(activeTabIndex.value)
+})
+
+function replaceActiveTab(index: number) {
+    activeTabIndex.value = index
+    emit('switch-view', headerButtons.value[index].component)
+
+}
 
 function getMouseCoordsRelativeToTheCenter(mouseEvent: MouseEvent | undefined): IMouseCoords {
     if (!mouseEvent) return {
@@ -66,7 +83,7 @@ function setBoxShadowStyle(obj: IBoxShadow): void {
         <nav :style="{ 'box-shadow': boxShadowStyle }">
             <ul>
                 <li v-for="(button, index) in headerButtons" :key="index">
-                    <el-button :type="button.type" :round="activeTabIndex === index" @click="activeTabIndex = index">
+                    <el-button :type="button.type" :round="activeTabIndex === index" @click="replaceActiveTab(index)">
                         {{ button.text }}
                     </el-button>
                 </li>
@@ -98,7 +115,7 @@ header nav {
 }
 
 header ul {
-   
+
     width: 100%;
     display: flex;
     justify-content: space-around;
