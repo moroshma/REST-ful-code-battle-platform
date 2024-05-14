@@ -1,0 +1,67 @@
+<script setup lang="ts">
+import AuthCard from '@/components/forms/AuthCard.vue';
+import { AuthTypes } from '@/interfaces/auth/enums';
+import type { AuthCardType } from '@/interfaces/auth/types';
+import { computed, ref } from 'vue';
+import ReferralForm from '@/components/forms/ReferralForm.vue'
+import ServerResponseForm from '@/components/forms/ServerResponseForm.vue'
+
+const type = ref<AuthCardType>(AuthTypes.login)
+const textButtonRefferal = computed(() => type.value === 'login' ? "Go to register" : 'Go to login')
+const label = computed(() => type.value === 'login' ? AuthTypes.password : AuthTypes.login)
+
+const formSubmitted = ref(false)
+const leftPosition = computed(() => type.value === 'login' ? '7%' : '59%')
+
+const response = ref<any>(undefined)
+
+function changeAuthCard() {
+    if (type.value === AuthTypes.login)
+        type.value = AuthTypes.password
+    else
+        type.value = AuthTypes.login
+}
+
+async function auth() {
+    formSubmitted.value = true
+    const req = await new Promise((res) => setTimeout(res, 2000))
+
+    response.value = 'ответ'
+}
+</script>
+
+<template>
+    <div class="auth_form">
+        <Transition name="flightCard">
+            <AuthCard v-if="!formSubmitted" @submit="auth" :type="type" :leftPositionCard="leftPosition" />
+        </Transition>
+        <div :style="{ 'float': type === 'password' ? 'left' : 'right'}">
+            <ServerResponseForm @submit="formSubmitted = false" v-if="formSubmitted" />
+            <ReferralForm v-else :label="label" :textButton="textButtonRefferal" @submit="changeAuthCard"/>
+        </div>
+    </div>
+</template>
+
+<style>
+.response {
+    float: right;
+}
+
+.auth_form {
+    position: relative;
+    background-color: rgba(34, 34, 34, 0.3);
+    width: 50%;
+    min-width: 350px;
+    height: 250px;
+
+    border-bottom-right-radius: 10px;
+
+    backdrop-filter: blur(20px);
+
+    box-shadow: inset 0px 0px 20px 0px rgba(146, 146, 146, 0.5);
+}
+
+.referral_form {
+    margin: 0 10%;
+}
+</style>

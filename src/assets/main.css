@@ -1,0 +1,4 @@
+@import './base.css';
+@import './animations/cardFly.css';
+@import './animations/replacingInputFields.css';
+@import './adaptive//authPage.css';
