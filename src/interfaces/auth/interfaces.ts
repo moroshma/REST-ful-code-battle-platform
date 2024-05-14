@@ -2,7 +2,7 @@ import type { AuthCardType } from "./types";
 
 export interface IAuthCardProps {
     type:AuthCardType,
-    leftPositionCard?:string
+    rightPosition?:string
 } 
 
 export interface IAuthReferralForm{

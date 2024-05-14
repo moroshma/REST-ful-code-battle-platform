@@ -1,10 +1,10 @@
 <script setup lang="ts">
-    import BattleCard from '@/components/battles/BattleCard.vue'
+    import BattleModes from './BattleModesView.vue';
 </script>
 
 
 <template>
     <div>
-        <BattleCard/>
+        <BattleModes/>
     </div>
 </template>

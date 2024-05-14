@@ -5,7 +5,7 @@ import backGround from '../assets/videos/code.mp4'
 
 <template>
     <div class="auth_container">
-        <video autoplay loop muted :src="backGround"></video>
+        <video autoplay loop muted="true" :src="backGround"></video>
         <div class="auth_container__form">
             <AuthView />
         </div> 

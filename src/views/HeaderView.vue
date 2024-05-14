@@ -68,12 +68,12 @@ function getMouseCoordsRelativeToTheCenter(mouseEvent: MouseEvent | undefined): 
 
 function getBoxShadowStyle(mouseCoords: IMouseCoords): IBoxShadow {
     const ratio = (mouseCoords.y / document.body.clientHeight) * 600
-    return { ...mouseCoords, y: ratio, opacity: 0.8, blur: 500 }
+    return { ...mouseCoords, y: ratio, opacity: 0.9, blur: 600 }
 }
 
 function setBoxShadowStyle(obj: IBoxShadow): void {
     const { x, y, blur, opacity } = obj
-    boxShadowStyle.value = `${x / 7}px ${y / 7}px ${blur}px 40px rgb(80, 11, 73, ${opacity})`
+    boxShadowStyle.value = ` ${x / 7}px ${y / 7}px ${blur}px 40px rgb(80, 30, 120, ${opacity})`
 }
 </script>
 

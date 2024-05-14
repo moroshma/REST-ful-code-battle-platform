@@ -17,7 +17,7 @@ function submit() {
 </script>
 
 <template>
-    <div class="auth_card" :style="{ 'left': leftPositionCard }">
+    <div class="auth_card" :style="{'right': props.rightPosition}">
         <form @submit.prevent="submit">
             <Transition name="replacingInputFields">
                 <div v-if="props.type === 'login'" style="display: flex; flex-direction: column;">
@@ -47,19 +47,18 @@ form {
 .auth_card {
     display: flex;
     justify-content: center;
-    overflow: hidden;
     position: absolute;
-    height: 120%;
-    left: 53%;
-    background-color: #101d1d;
+    height: 100%;
     width: 300px;
-    top: -10%;
-
+    top: 0%;
     opacity: 1;
     transition: all 0.5s;
 
-    border-bottom-right-radius: 10%;
-    border-bottom-left-radius: 10%;
+    border: 50px solid transparent;
+    border-top: 70px solid #101d1d;
+
+    border-bottom: 70px solid #101d1d;
+
 }
 
 .auth_card input {

@@ -11,7 +11,7 @@ const textButtonRefferal = computed(() => type.value === 'login' ? "Go to regist
 const label = computed(() => type.value === 'login' ? AuthTypes.password : AuthTypes.login)
 
 const formSubmitted = ref(false)
-const leftPosition = computed(() => type.value === 'login' ? '7%' : '59%')
+const positionRight = computed(() => type.value === 'login' ? '60%' : '7%')
 
 const response = ref<any>(undefined)
 
@@ -33,7 +33,7 @@ async function auth() {
 <template>
     <div class="auth_form">
         <Transition name="flightCard">
-            <AuthCard v-if="!formSubmitted" @submit="auth" :type="type" :leftPositionCard="leftPosition" />
+            <AuthCard v-if="!formSubmitted" @submit="auth" :type="type" :rightPosition="positionRight" />
         </Transition>
         <div :style="{ 'float': type === 'password' ? 'left' : 'right'}">
             <ServerResponseForm @submit="formSubmitted = false" v-if="formSubmitted" />
@@ -48,7 +48,6 @@ async function auth() {
 }
 
 .auth_form {
-    position: relative;
     background-color: rgba(34, 34, 34, 0.3);
     width: 50%;
     min-width: 350px;
