@@ -2,7 +2,7 @@
 import HeaderView from '@/views/HeaderView.vue'
 import FooterView from '@/views/FooterView.vue'
 import { ref } from 'vue';
-import {throttle} from '@/helpers/throttle.ts'
+import { throttle } from '@/helpers/throttle'
 
 const mouseEvent = ref<MouseEvent>()
 
