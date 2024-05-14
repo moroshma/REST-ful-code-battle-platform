@@ -25,3 +25,8 @@ C:/Users/Maks/Desktop/REST-ful-code-battle-platform/BuisnessLogicLayer/obj/Debug
 /home/moroshma/RiderProjects/REST-ful-code-battle-platform/BuisnessLogicLayer/bin/Debug/net8.0/BuisnessLogicLayer.runtimeconfig.json
 /home/moroshma/RiderProjects/REST-ful-code-battle-platform/BuisnessLogicLayer/obj/Debug/net8.0/BuisnessLogicLayer.csproj.AssemblyReference.cache
 /home/moroshma/RiderProjects/REST-ful-code-battle-platform/BuisnessLogicLayer/obj/Debug/net8.0/BuisnessLogicLayer.genruntimeconfig.cache
+/home/moroshma/RiderProjects/REST-ful-code-battle-platform/BuisnessLogicLayer/bin/Debug/net8.0/DataAccessLayer.dll
+/home/moroshma/RiderProjects/REST-ful-code-battle-platform/BuisnessLogicLayer/bin/Debug/net8.0/DataAccessLayer.pdb
+/home/moroshma/RiderProjects/REST-ful-code-battle-platform/BuisnessLogicLayer/obj/Debug/net8.0/BuisnessLogicLayer.csproj.CopyComplete
+/home/moroshma/RiderProjects/REST-ful-code-battle-platform/BuisnessLogicLayer/bin/Debug/net8.0/Infrastructeres.dll
+/home/moroshma/RiderProjects/REST-ful-code-battle-platform/BuisnessLogicLayer/bin/Debug/net8.0/Infrastructeres.pdb

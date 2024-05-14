@@ -270,3 +270,6 @@ C:/Users/Maks/Desktop/REST-ful-code-battle-platform/PresentationLayer/bin/Debug/
 /home/moroshma/RiderProjects/REST-ful-code-battle-platform/PresentationLayer/bin/Debug/net8.0/runtimes/browser/lib/net8.0/System.Text.Encodings.Web.dll
 /home/moroshma/RiderProjects/REST-ful-code-battle-platform/PresentationLayer/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
 /home/moroshma/RiderProjects/REST-ful-code-battle-platform/PresentationLayer/obj/Debug/net8.0/PresentationLayer.csproj.CopyComplete
+/home/moroshma/RiderProjects/REST-ful-code-battle-platform/PresentationLayer/bin/Debug/net8.0/BCrypt.Net-Next.dll
+/home/moroshma/RiderProjects/REST-ful-code-battle-platform/PresentationLayer/bin/Debug/net8.0/Infrastructeres.dll
+/home/moroshma/RiderProjects/REST-ful-code-battle-platform/PresentationLayer/bin/Debug/net8.0/Infrastructeres.pdb

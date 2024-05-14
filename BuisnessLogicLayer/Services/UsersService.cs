@@ -1,16 +1,59 @@
 using codeBattleService.BusinessLogicLayer.Interfaces;
+using DataAccessLayer.Interfaces;
+using DataAccessLayer.Models;
+using Infrastructure;
+
 
 namespace codeBattleService.BusinessLogicLayer.Services;
 
-public class UsersService
-{   private readonly IPasswordHasher _passwordHasher;
-    public UsersService(IPasswordHasher passwordHasher)
+
+public class UsersService(IUserRepository userRepository) : IUsersService {
+    
+    public async Task<Guid> Add(string username, string email, string password)
     {
-        _passwordHasher = passwordHasher;
+        PasswordHasher passwordHasher = new PasswordHasher();
+        // Проверяем, существует ли уже пользователь с таким именем или электронной почтой
+        //var existingUser = await userRepository.GetByUsernameOrEmail(username, email);
+        //if (existingUser != null)
+        //{
+           // throw new Exception("User with this username or email already exists.");
+        //}
+
+        // Хешируем пароль
+        var hashedPassword = password;//passwordHasher.Generate(password);
+
+        // Создаем нового пользователя
+        var user = new User
+        {
+            Id = Guid.NewGuid(),
+            UserName = username,
+            Email = email,
+            Password = hashedPassword,
+            Elo = 1200, // начальное значение Elo
+        };
+
+        // Добавляем нового пользователя в репозиторий
+        userRepository.Create(user);
+
+        // Возвращаем идентификатор нового пользователя
+        return user.Id.Value;
     }
-    public async Task Register(string username, string email, string password)
+
+    public Task<User> Get(string username, string password)
     {
-        string hashedPassword = _passwordHasher.Generate(password);
-        //var user = new User(username, email, hashedPassword);
+        PasswordHasher passwordHasher = new PasswordHasher();
+        var hashedPassword = password;//passwordHasher.Generate(password);
+        
+        // Получаем пользователя по имени
+        var user = userRepository.GetByUsernamePassword(username, hashedPassword);
+        
+        // Проверяем, существует ли пользователь с таким именем и паролем
+        if (user == null)
+        {
+            throw new Exception("Invalid username or password.");
+        }
+        
+        return Task.FromResult(user);
     }
 }
+

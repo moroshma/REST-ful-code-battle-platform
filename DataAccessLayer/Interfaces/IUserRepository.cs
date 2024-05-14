@@ -14,5 +14,7 @@ namespace DataAccessLayer.Interfaces
     {
         IEnumerable<User> FindActiveNearElo(int elo, int range);
 
+        User GetByUsernamePassword(string username, string hashedPassword);
     }
+    
 }

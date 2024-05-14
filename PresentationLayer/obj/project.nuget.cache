@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "qZxU+I9GgUQFQZF+mPWIxWymQXwR1bxpimwjgiaC1PhUZ9/nDRNW5D92LX+mjklmpGWbjdukEy0HkVswNm7jlQ==",
+  "dgSpecHash": "4jcVLnX0BtSftsJNQ9iwxCq5Fzrmle7mukyJoG2xDeiirdgSnVjWVzlw3BxP4nhIkqfyUyBmcK0vTYOlH+as4A==",
   "success": true,
   "projectFilePath": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/PresentationLayer/PresentationLayer.csproj",
   "expectedPackageFiles": [
     "/home/moroshma/.nuget/packages/azure.core/1.35.0/azure.core.1.35.0.nupkg.sha512",
     "/home/moroshma/.nuget/packages/azure.identity/1.10.3/azure.identity.1.10.3.nupkg.sha512",
+    "/home/moroshma/.nuget/packages/bcrypt.net-next/4.0.3/bcrypt.net-next.4.0.3.nupkg.sha512",
     "/home/moroshma/.nuget/packages/entityframework/6.5.0-preview2-24180-01/entityframework.6.5.0-preview2-24180-01.nupkg.sha512",
     "/home/moroshma/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/home/moroshma/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/8.0.4/microsoft.aspnetcore.authentication.jwtbearer.8.0.4.nupkg.sha512",

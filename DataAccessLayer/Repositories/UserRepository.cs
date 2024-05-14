@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 namespace DataAccessLayer.Ropositories
 {
 
-    public class UserRepository : IUserRepository
+    public class UserRepository :  IUserRepository
     {
         private CodeBattleDBContext db;
 
@@ -55,6 +55,10 @@ namespace DataAccessLayer.Ropositories
             return db.Users;
         }
         
+        public User GetByUsernamePassword(string username, string hashedPassword)
+        {
+            return db.Users.FirstOrDefault(u => u.UserName == username && u.Password == hashedPassword);
+        }
     }
 }
    

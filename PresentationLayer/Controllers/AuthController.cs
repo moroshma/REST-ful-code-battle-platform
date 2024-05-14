@@ -1,3 +1,5 @@
+using BusinessLogicLayer.DTO;
+using codeBattleService.BusinessLogicLayer.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 
@@ -5,67 +7,46 @@ namespace codeBattleService.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-
-public class AuthController : ControllerBase
+public class AuthController : Controller
 {
-    /*
-    IAuthService AuthService { get; }
-    IOptions<AuthOptions> AuthOptions { get; }
+    private readonly IUsersService _userService;
 
-    public AuthController(IAuthService authService, IOptions<AuthOptions> authOptions)
+
+    public AuthController(IUsersService userService)
     {
-        AuthService = authService;
-        AuthOptions = authOptions;
+        _userService = userService;
     }
 
     [HttpPost]
     [Route("Register")]
-    public TokenDTO Register([FromBody]  registerForm)
+    public async Task<IActionResult> Register([FromBody] RegisterForm registerForm)
     {
-        return AuthService.RegisterUser(registerForm);
+        var req = _userService.Add(registerForm.UserName, registerForm.Email, registerForm.Password);
+        return Ok(new
+        {
+            UserId = req.Result,
+        });
     }
 
-    [HttpGet]
+    [HttpPost]
     [Route("Login")]
-    public TokenDTO Login(LoginForm loginForm)
+    public async Task<IActionResult> Login([FromBody] LoginForm registerForm)
     {
-        return AuthService.LoginUser(loginForm);
-    }
+        try
+        {
+            var req = await _userService.Get(registerForm.UserName, registerForm.Password);
 
-    [HttpGet]
-    [Route("AuthorizeBot")]
-    public TokenDTO AuthorizeBot([FromBody] BotAuthDTO botAuthDTO)
-    {
-        return AuthService.AuthorizeBot(botAuthDTO.Secret);
+            return Ok(new
+            {
+                UserId = req.Id,
+                Email = req.Email,
+                UserName = req.UserName,
+            });
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+   
     }
-
-    [HttpGet]
-    [Route("RefreshToken")]
-    public ActionResult<TokenDTO> RefreshToken(string refreshToken)
-    {
-        JwtSecurityToken token = new JwtSecurityToken(refreshToken);
-        if (!ValidateRefreshToken(token)) return Unauthorized();
-        TokenDTO tokenDTO = new TokenDTO(
-            id: token.Claims.First(c => c.Type == ClaimTypes.Name).Value,
-            accessToken: "",
-            refreshToken: refreshToken
-        );
-        return AuthService.RefreshToken(tokenDTO);
-    }
-
-    private bool ValidateRefreshToken(JwtSecurityToken jwtToken)
-    {
-        string tokenString = jwtToken.ToString().Replace("\\", "");
-        int firstDot = tokenString.IndexOf('.');
-        string header = Base64UrlEncoder.Encode(Encoding.UTF8.GetBytes(tokenString.Substring(0, firstDot)));
-        string payload =
-            Base64UrlEncoder.Encode(
-                Encoding.UTF8.GetBytes(tokenString.Substring(firstDot + 1, tokenString.Length - firstDot - 1)));
-        string signature = Base64UrlEncoder.Encode(HMACSHA256.HashData(Encoding.UTF8.GetBytes(AuthOptions.Value.Secret),
-            Encoding.UTF8.GetBytes(header + "." + payload)));
-        if (jwtToken.RawSignature == signature) return true;
-        else return false;
-    }
-}
-*/
 }
