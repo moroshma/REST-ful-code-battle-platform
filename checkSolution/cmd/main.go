@@ -7,6 +7,8 @@ import (
 	"github.com/moroshma/REST-ful-code-battle-platform/checkSolution/internal/config"
 	checkCode "github.com/moroshma/REST-ful-code-battle-platform/checkSolution/internal/http-handler/url/checker"
 	CodeRunner "github.com/moroshma/REST-ful-code-battle-platform/checkSolution/internal/service"
+	httpSwagger "github.com/swaggo/http-swagger"
+	_ "github.com/swaggo/http-swagger/example/go-chi/docs"
 	"log/slog"
 	"net/http"
 	"os"
@@ -20,6 +22,21 @@ const (
 	envDev   = "dev"
 	envProd  = "prod"
 )
+
+// @title Swagger check solution API
+// @version 1.0
+// @description This is a sample server Petstore server.
+// @termsOfService http://swagger.io/terms/
+
+// @contact.name API Support
+// @contact.url http://www.swagger.io/support
+// @contact.email support@swagger.io
+
+// @license.name Apache 2.0
+// @license.url http://www.apache.org/licenses/LICENSE-2.0.html
+
+// @host petstore.swagger.io
+// @BasePath /v2
 
 func main() {
 
@@ -37,6 +54,10 @@ func main() {
 	router.Use(middleware.RequestID)
 	router.Use(middleware.Recoverer)
 	router.Use(middleware.URLFormat)
+
+	router.Get("/swagger/*", httpSwagger.Handler(
+		httpSwagger.URL("http://"+cfg.Address+"/swagger/doc.json"), //The url pointing to API definition
+	))
 
 	router.Post("/{alias}", checkCode.New(log, CodeRunner.CodeRunner{}))
 
