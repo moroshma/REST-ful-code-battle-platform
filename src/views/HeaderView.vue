@@ -12,20 +12,16 @@ const props = defineProps({
 const boxShadowStyle = ref('12px 0px 500px 5px rgb(80, 11, 73, 1)')
 
 const mouseEvent = computed(() => props.mouseEvent)
-const activeTabIndex = ref<number>()
+const activeTabIndex = ref<number>(0)
 
 const headerButtons = ref([
     {
-        text:'Battles',
-        type:'danger',
+        text: 'Battles',
+        type: 'danger',
     },
     {
-        text:'Profile',
-        type:'primary'
-    },
-    {
-        text:'Log out',
-        type:'warning'
+        text: 'Profile',
+        type: 'primary'
     }
 ])
 
@@ -56,7 +52,7 @@ function getMouseCoordsRelativeToTheCenter(mouseEvent: MouseEvent | undefined): 
 
 function getBoxShadowStyle(mouseCoords: IMouseCoords): IBoxShadow {
     const ratio = (mouseCoords.y / document.body.clientHeight) * 600
-    return { ...mouseCoords,y:ratio, opacity: 0.8, blur: 500 }
+    return { ...mouseCoords, y: ratio, opacity: 0.8, blur: 500 }
 }
 
 function setBoxShadowStyle(obj: IBoxShadow): void {
@@ -67,13 +63,21 @@ function setBoxShadowStyle(obj: IBoxShadow): void {
 
 <template>
     <header>
-        <ul :style="{ 'box-shadow': boxShadowStyle }">
-            <li v-for="(button,index) in headerButtons" :key="index"> 
-                <el-button :type="button.type" :round="activeTabIndex === index" @click="activeTabIndex = index">
-                    {{ button.text }}
+        <nav :style="{ 'box-shadow': boxShadowStyle }">
+            <ul>
+                <li v-for="(button, index) in headerButtons" :key="index">
+                    <el-button :type="button.type" :round="activeTabIndex === index" @click="activeTabIndex = index">
+                        {{ button.text }}
+                    </el-button>
+                </li>
+            </ul>
+            <ul>
+                <el-button type="warning">
+                    Log out
                 </el-button>
-            </li>
-        </ul>
+            </ul>
+        </nav>
+
     </header>
 </template>
 
@@ -84,12 +88,18 @@ header {
     width: 100%;
 }
 
-header ul {
-    transition: all 0.1s;
+header nav {
+    transition: box-shadow 0.1s;
     width: 50%;
     margin: 0 auto;
-    background-color: rgb(75, 25, 70);
+    display: flex;
     height: 60px;
+    background-color: rgb(75, 25, 70);
+}
+
+header ul {
+   
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
