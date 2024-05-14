@@ -14,6 +14,21 @@ const boxShadowStyle = ref('12px 0px 500px 5px rgb(80, 11, 73, 1)')
 const mouseEvent = computed(() => props.mouseEvent)
 const activeTabIndex = ref<number>()
 
+const headerButtons = ref([
+    {
+        text:'Battles',
+        type:'danger',
+    },
+    {
+        text:'Profile',
+        type:'primary'
+    },
+    {
+        text:'Log out',
+        type:'warning'
+    }
+])
+
 watchEffect(() => {
     const coords = getMouseCoordsRelativeToTheCenter(mouseEvent.value)
 
@@ -53,11 +68,11 @@ function setBoxShadowStyle(obj: IBoxShadow): void {
 <template>
     <header>
         <ul :style="{ 'box-shadow': boxShadowStyle }">
-            <li> <el-button type="danger" :round="activeTabIndex === 1" @click="activeTabIndex = 1">Battles</el-button>
+            <li v-for="(button,index) in headerButtons" :key="index"> 
+                <el-button :type="button.type" :round="activeTabIndex === index" @click="activeTabIndex = index">
+                    {{ button.text }}
+                </el-button>
             </li>
-            <li> <el-button type="primary" :round="activeTabIndex === 2" @click="activeTabIndex = 2">Profile</el-button>
-            </li>
-            <!-- тот кто смотрит не переживай, здесь будет рендер в цикле :) -->
         </ul>
     </header>
 </template>
