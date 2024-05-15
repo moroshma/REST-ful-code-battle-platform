@@ -64,6 +64,7 @@ func (cr BashCodeRunner) Run(code string, test []string, checkRes []string) res.
 
 	err = buildProgram(codePath, path, id)
 	if err != nil {
+
 		return res.Response{
 			SendUUID: id,
 			Status:   "Ошибка компиляции",
@@ -116,7 +117,8 @@ func testRunner(binPath string, test []string, checkRes []string) res.Response {
 }
 
 func runCase(binPath string, test string, checkRes string) string {
-	ctx, _ := context.WithTimeout(context.Background(), time.Second*2)
+	ctx, cancel := context.WithTimeout(context.Background(), time.Second*2)
+	defer cancel()
 	done := make(chan struct{})
 	defer close(done)
 

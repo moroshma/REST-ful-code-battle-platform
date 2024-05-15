@@ -23,20 +23,9 @@ const (
 	envProd  = "prod"
 )
 
-// @title Swagger check solution API
+// @title REST-ful-code-battle-platform API
 // @version 1.0
-// @description This is a sample server Petstore server.
-// @termsOfService http://swagger.io/terms/
-
-// @contact.name API Support
-// @contact.url http://www.swagger.io/support
-// @contact.email support@swagger.io
-
-// @license.name Apache 2.0
-// @license.url http://www.apache.org/licenses/LICENSE-2.0.html
-
-// @host petstore.swagger.io
-// @BasePath /v2
+// @description REST-ful-code-battle-platform API
 
 func main() {
 
@@ -55,12 +44,11 @@ func main() {
 	router.Use(middleware.Recoverer)
 	router.Use(middleware.URLFormat)
 
+	router.Post("/checkSolution", checkCode.New(log, CodeRunner.BashCodeRunner{}))
+
 	router.Get("/swagger/*", httpSwagger.Handler(
 		httpSwagger.URL("http://"+cfg.Address+"/swagger/doc.json"), //The url pointing to API definition
 	))
-
-	router.Post("/{checkSolution}", checkCode.New(log, CodeRunner.BashCodeRunner{}))
-
 	done := make(chan os.Signal, 1)
 	signal.Notify(done, os.Interrupt, syscall.SIGINT, syscall.SIGTERM)
 
