@@ -1,8 +1,14 @@
 package response
 
+type Answer struct {
+	TestCase string `json:"testCase"`
+	Output   string `json:"output"`
+}
+
 type Response struct {
-	Status string `json:"status"`
-	Error  string `json:"error,omitempty"`
+	Status  string `json:"status"`
+	Error   string `json:"error,omitempty"`
+	Payload Answer `json:"answer,omitempty"`
 }
 
 const (
@@ -12,6 +18,7 @@ const (
 	TimeOut       = "Time out"
 	WrongAnswer   = "Wrong Answer"
 	DoesntCompile = "Doesnt Compile"
+	SystemError   = "System Error"
 )
 
 func OK() Response {

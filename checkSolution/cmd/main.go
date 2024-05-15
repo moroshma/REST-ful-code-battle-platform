@@ -59,7 +59,7 @@ func main() {
 		httpSwagger.URL("http://"+cfg.Address+"/swagger/doc.json"), //The url pointing to API definition
 	))
 
-	router.Post("/{alias}", checkCode.New(log, CodeRunner.CodeRunner{}))
+	router.Post("/{checkSolution}", checkCode.New(log, CodeRunner.BashCodeRunner{}))
 
 	done := make(chan os.Signal, 1)
 	signal.Notify(done, os.Interrupt, syscall.SIGINT, syscall.SIGTERM)

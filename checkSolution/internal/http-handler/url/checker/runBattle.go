@@ -10,9 +10,9 @@ import (
 )
 
 type Request struct {
-	CodeTask      string     `json:"code_task"`
-	TestCase      [][]string `json:"testCase"`
-	CorrectAnswer [][]string `json:"correct_answer"`
+	CodeTask      string   `json:"code_task"`
+	TestCase      []string `json:"test_case"`
+	CorrectAnswer []string `json:"correct_answer"`
 }
 
 type Response struct {
@@ -21,7 +21,7 @@ type Response struct {
 }
 
 type CodeRunner interface {
-	Run(code string, test [][]string, checkRes [][]string) res.Response
+	Run(code string, test []string, checkRes []string) res.Response
 }
 
 func New(log *slog.Logger, codeRunner CodeRunner) http.HandlerFunc {
