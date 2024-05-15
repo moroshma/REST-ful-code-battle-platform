@@ -6,9 +6,10 @@ type Answer struct {
 }
 
 type Response struct {
-	Status  string `json:"status"`
-	Error   string `json:"error,omitempty"`
-	Payload Answer `json:"answer,omitempty"`
+	SendUUID string `json:"sendUUID"`
+	Status   string `json:"status"`
+	Error    string `json:"error,omitempty"`
+	Payload  Answer `json:"answer,omitempty"`
 }
 
 const (
@@ -16,7 +17,7 @@ const (
 	StatusError   = "Error"
 	WrongData     = "Wrong Data"
 	TimeOut       = "Time out"
-	WrongAnswer   = "Wrong Answer"
+	RuntimeError  = "RuntimeError"
 	DoesntCompile = "Doesnt Compile"
 	SystemError   = "System Error"
 )

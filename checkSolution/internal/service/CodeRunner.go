@@ -2,11 +2,13 @@ package CodeRunner
 
 import (
 	"bytes"
+	"context"
 	"errors"
 	"github.com/google/uuid"
 	res "github.com/moroshma/REST-ful-code-battle-platform/checkSolution/internal/lib/api/response"
 	"os"
 	"os/exec"
+	"time"
 )
 
 type BashCodeRunner struct {
@@ -14,16 +16,17 @@ type BashCodeRunner struct {
 }
 
 func (cr BashCodeRunner) Run(code string, test []string, checkRes []string) res.Response {
-	id := uuid.New()
-	path := "./solution/" + id.String()
+	id := uuid.New().String()
+	path := "./solution/" + id
 
 	// Создание директории
 	err := os.MkdirAll(path, 0755)
 
 	if err != nil {
 		return res.Response{
-			Status: "Не удалось создать директорию",
-			Error:  res.SystemError,
+			SendUUID: id,
+			Status:   "Не удалось создать директорию",
+			Error:    res.SystemError,
 		}
 	}
 
@@ -31,8 +34,9 @@ func (cr BashCodeRunner) Run(code string, test []string, checkRes []string) res.
 	_, dirErr := os.Stat(path)
 	if dirErr != nil {
 		return res.Response{
-			Status: "Ошибка при проверке создания директории",
-			Error:  res.SystemError,
+			SendUUID: id,
+			Status:   "Ошибка при проверке создания директории",
+			Error:    res.SystemError,
 		}
 	}
 	defer os.RemoveAll(path)
@@ -41,8 +45,9 @@ func (cr BashCodeRunner) Run(code string, test []string, checkRes []string) res.
 	file, err := os.Create(codePath)
 	if err != nil {
 		return res.Response{
-			Status: "Не удалось создать файл",
-			Error:  res.SystemError,
+			SendUUID: id,
+			Status:   "Не удалось создать файл",
+			Error:    res.SystemError,
 		}
 	}
 
@@ -50,21 +55,25 @@ func (cr BashCodeRunner) Run(code string, test []string, checkRes []string) res.
 	_, writeErr := file.WriteString(code)
 	if writeErr != nil {
 		return res.Response{
-			Status: "Ошибка при записи в файл",
-			Error:  res.SystemError,
+			SendUUID: id,
+			Status:   "Ошибка при записи в файл",
+			Error:    res.SystemError,
 		}
 	}
 	file.Close()
 
-	err = buildProgram(codePath, path, id.String())
+	err = buildProgram(codePath, path, id)
 	if err != nil {
 		return res.Response{
-			Status: "Ошибка компиляции",
-			Error:  res.DoesntCompile,
+			SendUUID: id,
+			Status:   "Ошибка компиляции",
+			Error:    res.DoesntCompile,
 		}
 	}
 
-	return testRunner(path+"/"+id.String(), test, checkRes)
+	ret := testRunner(path+"/"+id, test, checkRes)
+	ret.SendUUID = id
+	return ret
 }
 
 func buildProgram(codePath string, path string, nameFile string) error {
@@ -95,7 +104,7 @@ func testRunner(binPath string, test []string, checkRes []string) res.Response {
 		if len(ret) != 0 {
 			return res.Response{
 				Status: "Ошибка на кейсе",
-				Error:  res.WrongAnswer,
+				Error:  res.RuntimeError,
 				Payload: res.Answer{
 					TestCase: checkRes[i],
 					Output:   ret,
@@ -107,6 +116,10 @@ func testRunner(binPath string, test []string, checkRes []string) res.Response {
 }
 
 func runCase(binPath string, test string, checkRes string) string {
+	ctx, _ := context.WithTimeout(context.Background(), time.Second*2)
+	done := make(chan struct{})
+	defer close(done)
+
 	echoCreate := func(in string) string {
 		return "<(echo \"" + in + "\")"
 	}
@@ -115,12 +128,29 @@ func runCase(binPath string, test string, checkRes string) string {
 	var out bytes.Buffer
 	cmd.Stdout = &out
 
-	err := cmd.Run()
+	var err error
+
+	go func() {
+		err = cmd.Run()
+		done <- struct{}{}
+	}()
+
+	select {
+	case <-ctx.Done():
+		return "Time out"
+	case <-done:
+		break
+	}
+
 	if err != nil {
 		var exitError *exec.ExitError
 		if errors.As(err, &exitError) {
 			if exitError.ExitCode() != 0 {
-				return out.String()
+				ret := out.String()
+				if ret == "\t\t\t\t\t\t\t      >\n" {
+					return ""
+				}
+				return ret
 			}
 		}
 	}
