@@ -4,7 +4,7 @@ import type { IBoxShadow, IMouseCoords } from '@/interfaces/homePage/interfaces'
 import BattlesView from '@/views/BattlesView.vue'
 import ProfileView from '@/views/ProfileView.vue'
 
-const emit = defineEmits(['switch-view'])
+const emit = defineEmits(['switch-view', 'log-out'])
 
 const props = defineProps({
     mouseEvent: {
@@ -67,13 +67,20 @@ function getMouseCoordsRelativeToTheCenter(mouseEvent: MouseEvent | undefined): 
 }
 
 function getBoxShadowStyle(mouseCoords: IMouseCoords): IBoxShadow {
-    const ratio = (mouseCoords.y / document.body.clientHeight) * 600
+    const ratio = (mouseCoords.y / document.body.clientHeight) * 700
     return { ...mouseCoords, y: ratio, opacity: 0.9, blur: 600 }
 }
 
 function setBoxShadowStyle(obj: IBoxShadow): void {
     const { x, y, blur, opacity } = obj
-    boxShadowStyle.value = ` ${x / 7}px ${y / 7}px ${blur}px 40px rgb(80, 30, 120, ${opacity})`
+    const ratio = 7
+    boxShadowStyle.value = ` ${x / ratio}px ${y / ratio}px ${blur}px 60px rgb(80, 30, 120, ${opacity})`
+}
+
+function logOut(){
+    console.log('out');
+    
+    emit('log-out')
 }
 </script>
 
@@ -88,7 +95,7 @@ function setBoxShadowStyle(obj: IBoxShadow): void {
                 </li>
             </ul>
             <ul>
-                <el-button type="warning">
+                <el-button type="warning" @click="logOut">
                     Log out
                 </el-button>
             </ul>
