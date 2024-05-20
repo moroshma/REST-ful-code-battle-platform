@@ -4,12 +4,16 @@ import (
 	"bytes"
 	"context"
 	"errors"
+	"fmt"
 	"github.com/google/uuid"
 	res "github.com/moroshma/REST-ful-code-battle-platform/checkSolution/internal/lib/api/response"
 	"os"
 	"os/exec"
 	"time"
 )
+
+const checkFile = "check"
+const testFile = "test"
 
 type BashCodeRunner struct {
 	res.Response
@@ -72,7 +76,7 @@ func (cr BashCodeRunner) Run(code string, test []string, checkRes []string) res.
 		}
 	}
 
-	ret := testRunner(path+"/"+id, test, checkRes)
+	ret := testRunner(path, "/"+id, test, checkRes)
 	ret.SendUUID = id
 	return ret
 }
@@ -93,7 +97,7 @@ func buildProgram(codePath string, path string, nameFile string) error {
 	return nil
 }
 
-func testRunner(binPath string, test []string, checkRes []string) res.Response {
+func testRunner(path string, nameBin string, test []string, checkRes []string) res.Response {
 	if len(test) != len(checkRes) {
 		return res.Response{
 			Status: "Колличество тестов не соответствует колличеству кейсов.",
@@ -101,7 +105,10 @@ func testRunner(binPath string, test []string, checkRes []string) res.Response {
 		}
 	}
 	for i := 0; i < len(test); i++ {
-		ret := runCase(binPath, test[i], checkRes[i])
+		writeTestInFile(path, test[i], testFile)
+		writeTestInFile(path, checkRes[i], checkFile)
+
+		ret := runCase(path+nameBin, path+"/"+testFile, path+"/"+checkFile)
 		if len(ret) != 0 {
 			return res.Response{
 				Status: "Ошибка на кейсе",
@@ -116,16 +123,17 @@ func testRunner(binPath string, test []string, checkRes []string) res.Response {
 	return res.OK()
 }
 
-func runCase(binPath string, test string, checkRes string) string {
+func runCase(binPath string, testPath string, checkResPath string) string {
+
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second*2)
 	defer cancel()
 	done := make(chan struct{})
-	defer close(done)
 
-	echoCreate := func(in string) string {
-		return "<(echo \"" + in + "\")"
-	}
-	cmd := exec.Command("sh", "-c", binPath+" "+echoCreate(test)+" | diff -wiy - "+echoCreate(checkRes))
+	//echoCreate := func(in string) string {
+	//	return "<(echo \"" + in + "\")"
+	//}
+	cmdStr := fmt.Sprintf("sh -c '%s' < %s | diff -wbiE - %s", binPath, testPath, checkResPath)
+	cmd := exec.Command("bash", "-c", cmdStr)
 
 	var out bytes.Buffer
 	cmd.Stdout = &out
@@ -133,6 +141,7 @@ func runCase(binPath string, test string, checkRes string) string {
 	var err error
 
 	go func() {
+		defer close(done)
 		err = cmd.Run()
 		done <- struct{}{}
 	}()
@@ -158,4 +167,18 @@ func runCase(binPath string, test string, checkRes string) string {
 	}
 
 	return ""
+}
+
+func writeTestInFile(pathTest string, test string, tag string) error {
+
+	file, err := os.Create(pathTest + "/" + tag)
+	if err != nil {
+		return err
+	}
+	_, writeErr := file.WriteString(test)
+	if writeErr != nil {
+		return writeErr
+	}
+
+	return nil
 }
