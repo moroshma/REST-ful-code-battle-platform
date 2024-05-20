@@ -1,0 +1,11 @@
+{
+  "code_task": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\ti := 0\n\tfmt.Scanln(&i)\n\tfmt.Println(i)\n}",
+  "test_case": [
+    "1",
+    "1"
+  ],
+  "correct_answer": [
+    "1",
+    "1"
+  ]
+}
