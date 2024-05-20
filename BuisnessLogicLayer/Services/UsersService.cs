@@ -25,7 +25,7 @@ public class UsersService(IUserRepository userRepository) : IUsersService {
         // Создаем нового пользователя
         var user = new User
         {
-            Id = Guid.NewGuid(),
+            ID = Guid.NewGuid(),
             UserName = username,
             Email = email,
             Password = hashedPassword,
@@ -36,7 +36,7 @@ public class UsersService(IUserRepository userRepository) : IUsersService {
         userRepository.Create(user);
 
         // Возвращаем идентификатор нового пользователя
-        return user.Id.Value;
+        return user.ID.Value;
     }
 
     public Task<User> Get(string username, string password)

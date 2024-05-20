@@ -38,7 +38,7 @@ public class AuthController : Controller
 
             return Ok(new
             {
-                UserId = req.Id,
+                UserId = req.ID,
                 Email = req.Email,
                 UserName = req.UserName,
             });

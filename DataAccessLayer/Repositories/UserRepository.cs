@@ -21,9 +21,11 @@ namespace DataAccessLayer.Ropositories
             return db.Users.Where(predicate);
         }
 
-        public void Create(User item)
+        public async Task Create(User item)
         {
+            item.RefreshToken = ""; // Установите начальное значение для RefreshToken
             db.Users.Add(item);
+            await db.SaveChangesAsync();
         }
 
         public void Delete(string id)
