@@ -132,7 +132,7 @@ func runCase(binPath string, testPath string, checkResPath string) string {
 	//echoCreate := func(in string) string {
 	//	return "<(echo \"" + in + "\")"
 	//}
-	cmdStr := fmt.Sprintf("sh -c '%s' < %s | diff -wbiE - %s", binPath, testPath, checkResPath)
+	cmdStr := fmt.Sprintf("sh -c '%s' < %s | diff -wbiEy - %s", binPath, testPath, checkResPath)
 	cmd := exec.Command("bash", "-c", cmdStr)
 
 	var out bytes.Buffer
