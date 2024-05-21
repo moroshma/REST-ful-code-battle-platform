@@ -7,8 +7,15 @@ using Infrastructure;
 namespace codeBattleService.BusinessLogicLayer.Services;
 
 
-public class UsersService(IUserRepository userRepository) : IUsersService {
-    
+public class UsersService : IUsersService {
+    private readonly IUserRepository userRepository;
+    private readonly IJwtProvider _jwtProvider;
+
+    public UsersService(IUserRepository userRepository, IJwtProvider jwtProvider)
+    {
+        this.userRepository = userRepository;
+        this._jwtProvider = jwtProvider;
+    }
     public async Task<Guid> Add(string username, string email, string password)
     {
         PasswordHasher passwordHasher = new PasswordHasher();
@@ -39,7 +46,7 @@ public class UsersService(IUserRepository userRepository) : IUsersService {
         return user.ID.Value;
     }
 
-    public Task<User> Get(string username, string password)
+    public async Task<string> Get(string username, string password)
     {
         PasswordHasher passwordHasher = new PasswordHasher();
         var hashedPassword = password;//passwordHasher.Generate(password);
@@ -52,8 +59,9 @@ public class UsersService(IUserRepository userRepository) : IUsersService {
         {
             throw new Exception("Invalid username or password.");
         }
+        var token = _jwtProvider.GenerateToken(user);
         
-        return Task.FromResult(user);
+        return token;
     }
 }
 

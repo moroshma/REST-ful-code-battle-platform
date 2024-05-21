@@ -23,7 +23,6 @@ namespace DataAccessLayer.Ropositories
 
         public async Task Create(User item)
         {
-            item.RefreshToken = ""; // Установите начальное значение для RefreshToken
             db.Users.Add(item);
             await db.SaveChangesAsync();
         }

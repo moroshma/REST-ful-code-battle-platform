@@ -202,7 +202,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/DataAccessLayer/DataAccessLayer.csproj": {
+                "projectPath": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/DataAccessLayer/DataAccessLayer.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -222,6 +226,10 @@
             "EntityFramework": {
               "target": "Package",
               "version": "[6.5.0-preview2-24180-01, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.5, )"
             },
             "Microsoft.EntityFrameworkCore.Abstractions": {
               "target": "Package",

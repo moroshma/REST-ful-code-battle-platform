@@ -15,7 +15,5 @@ namespace DataAccessLayer.Models
         public string? Password { get; set; }
         public int Elo { get; set; }
         
-        public string RefreshToken { get; set; } = null!;
-        
     }
 }

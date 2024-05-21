@@ -26,3 +26,6 @@ C:/Users/Maks/Desktop/REST-ful-code-battle-platform/Infrastructeres/obj/Debug/ne
 /home/moroshma/RiderProjects/REST-ful-code-battle-platform/Infrastructeres/obj/Debug/net8.0/Infrastructeres.pdb
 /home/moroshma/RiderProjects/REST-ful-code-battle-platform/Infrastructeres/obj/Debug/net8.0/Infrastructeres.genruntimeconfig.cache
 /home/moroshma/RiderProjects/REST-ful-code-battle-platform/Infrastructeres/obj/Debug/net8.0/ref/Infrastructeres.dll
+/home/moroshma/RiderProjects/REST-ful-code-battle-platform/Infrastructeres/bin/Debug/net8.0/DataAccessLayer.dll
+/home/moroshma/RiderProjects/REST-ful-code-battle-platform/Infrastructeres/bin/Debug/net8.0/DataAccessLayer.pdb
+/home/moroshma/RiderProjects/REST-ful-code-battle-platform/Infrastructeres/obj/Debug/net8.0/Infrastructeres.csproj.CopyComplete

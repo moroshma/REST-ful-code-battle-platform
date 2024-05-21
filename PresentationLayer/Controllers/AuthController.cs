@@ -36,17 +36,23 @@ public class AuthController : Controller
         {
             var req = await _userService.Get(registerForm.UserName, registerForm.Password);
 
+            // Создаем куки с токеном
+            Response.Cookies.Append("net-Token", req, new CookieOptions
+            {
+                HttpOnly = true, // делаем куки доступными только на сервере
+                Secure = false, // передаем куки только через HTTPS
+                SameSite = SameSiteMode.Strict, // предотвращаем отправку куки на другие сайты
+                MaxAge = TimeSpan.FromHours(12) // устанавливаем время жизни куки
+            });
+
             return Ok(new
             {
-                UserId = req.ID,
-                Email = req.Email,
-                UserName = req.UserName,
+                Token = req
             });
         }
         catch (Exception e)
         {
             return BadRequest(e.Message);
         }
-   
     }
 }
