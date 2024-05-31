@@ -40,7 +40,7 @@ public class UsersService : IUsersService {
         };
 
         // Добавляем нового пользователя в репозиторий
-        userRepository.Create(user);
+        await userRepository.CreateAsync(user);
 
         // Возвращаем идентификатор нового пользователя
         return user.ID.Value;
@@ -52,14 +52,14 @@ public class UsersService : IUsersService {
         var hashedPassword = password;//passwordHasher.Generate(password);
         
         // Получаем пользователя по имени
-        var user = userRepository.GetByUsernamePassword(username, hashedPassword);
+        var user = await userRepository.GetByUsernamePasswordAsync(username, hashedPassword);
         
         // Проверяем, существует ли пользователь с таким именем и паролем
         if (user == null)
         {
             throw new Exception("Invalid username or password.");
         }
-        var token = _jwtProvider.GenerateToken(user);
+        var token =  _jwtProvider.GenerateToken(user);
         
         return token;
     }

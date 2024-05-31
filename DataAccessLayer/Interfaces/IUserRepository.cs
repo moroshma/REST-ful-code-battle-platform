@@ -8,13 +8,12 @@ using DataAccessLayer.EF;
 
 namespace DataAccessLayer.Interfaces
 {
-    // Интерфейс для работы с моделью Пользователя. Он вообще нужен? 
     
     public interface IUserRepository : IRepository<User>
     {
-        IEnumerable<User> FindActiveNearElo(int elo, int range);
+        Task<IEnumerable<User>> FindActiveNearEloAsync(int elo, int range);
 
-        User GetByUsernamePassword(string username, string hashedPassword);
+        Task<User> GetByUsernamePasswordAsync(string username, string hashedPassword);
     }
     
 }

@@ -1,36 +1,38 @@
 {
   "format": 1,
   "restore": {
-    "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/PresentationLayer/PresentationLayer.csproj": {}
+    "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\PresentationLayer\\PresentationLayer.csproj": {}
   },
   "projects": {
-    "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/BuisnessLogicLayer/BuisnessLogicLayer.csproj": {
+    "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\BuisnessLogicLayer\\BuisnessLogicLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/BuisnessLogicLayer/BuisnessLogicLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\BuisnessLogicLayer\\BuisnessLogicLayer.csproj",
         "projectName": "BuisnessLogicLayer",
-        "projectPath": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/BuisnessLogicLayer/BuisnessLogicLayer.csproj",
-        "packagesPath": "/home/moroshma/.nuget/packages/",
-        "outputPath": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/BuisnessLogicLayer/obj/",
+        "projectPath": "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\BuisnessLogicLayer\\BuisnessLogicLayer.csproj",
+        "packagesPath": "C:\\Users\\Maks\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\BuisnessLogicLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/moroshma/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Maks\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/DataAccessLayer/DataAccessLayer.csproj": {
-                "projectPath": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/DataAccessLayer/DataAccessLayer.csproj"
+              "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\DataAccessLayer\\DataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\DataAccessLayer\\DataAccessLayer.csproj"
               },
-              "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/Infrastructeres/Infrastructeres.csproj": {
-                "projectPath": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/Infrastructeres/Infrastructeres.csproj"
+              "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\Infrastructeres\\Infrastructeres.csproj": {
+                "projectPath": "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\Infrastructeres\\Infrastructeres.csproj"
               }
             }
           }
@@ -74,26 +76,28 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/8.0.104/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/DataAccessLayer/DataAccessLayer.csproj": {
+    "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\DataAccessLayer\\DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/DataAccessLayer/DataAccessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\DataAccessLayer\\DataAccessLayer.csproj",
         "projectName": "DataAccessLayer",
-        "projectPath": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/DataAccessLayer/DataAccessLayer.csproj",
-        "packagesPath": "/home/moroshma/.nuget/packages/",
-        "outputPath": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/DataAccessLayer/obj/",
+        "projectPath": "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\DataAccessLayer\\DataAccessLayer.csproj",
+        "packagesPath": "C:\\Users\\Maks\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\DataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/moroshma/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Maks\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -177,34 +181,36 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/8.0.104/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/Infrastructeres/Infrastructeres.csproj": {
+    "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\Infrastructeres\\Infrastructeres.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/Infrastructeres/Infrastructeres.csproj",
+        "projectUniqueName": "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\Infrastructeres\\Infrastructeres.csproj",
         "projectName": "Infrastructeres",
-        "projectPath": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/Infrastructeres/Infrastructeres.csproj",
-        "packagesPath": "/home/moroshma/.nuget/packages/",
-        "outputPath": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/Infrastructeres/obj/",
+        "projectPath": "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\Infrastructeres\\Infrastructeres.csproj",
+        "packagesPath": "C:\\Users\\Maks\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\Infrastructeres\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/moroshma/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Maks\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/DataAccessLayer/DataAccessLayer.csproj": {
-                "projectPath": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/DataAccessLayer/DataAccessLayer.csproj"
+              "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\DataAccessLayer\\DataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\DataAccessLayer\\DataAccessLayer.csproj"
               }
             }
           }
@@ -256,37 +262,39 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/8.0.104/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/PresentationLayer/PresentationLayer.csproj": {
+    "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\PresentationLayer\\PresentationLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/PresentationLayer/PresentationLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\PresentationLayer\\PresentationLayer.csproj",
         "projectName": "PresentationLayer",
-        "projectPath": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/PresentationLayer/PresentationLayer.csproj",
-        "packagesPath": "/home/moroshma/.nuget/packages/",
-        "outputPath": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/PresentationLayer/obj/",
+        "projectPath": "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\PresentationLayer\\PresentationLayer.csproj",
+        "packagesPath": "C:\\Users\\Maks\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\PresentationLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/moroshma/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Maks\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/BuisnessLogicLayer/BuisnessLogicLayer.csproj": {
-                "projectPath": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/BuisnessLogicLayer/BuisnessLogicLayer.csproj"
+              "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\BuisnessLogicLayer\\BuisnessLogicLayer.csproj": {
+                "projectPath": "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\BuisnessLogicLayer\\BuisnessLogicLayer.csproj"
               },
-              "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/DataAccessLayer/DataAccessLayer.csproj": {
-                "projectPath": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/DataAccessLayer/DataAccessLayer.csproj"
+              "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\DataAccessLayer\\DataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\DataAccessLayer\\DataAccessLayer.csproj"
               }
             }
           }
@@ -365,7 +373,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/8.0.104/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
