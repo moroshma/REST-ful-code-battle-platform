@@ -1,5 +1,4 @@
-﻿using DataAccessLayer.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,11 +8,11 @@ namespace DataAccessLayer.Interfaces
 {
     public interface IRepository<T> where T : class
     {
-        Task<IEnumerable<T>> GetAllAsync();
-        Task<T> GetAsync(string id);
-        Task<IEnumerable<User>> FindAsync(Func<T, bool> predicate);
-        Task CreateAsync(T item);
+        IEnumerable<T> GetAll();
+        T Get(string id);
+        IEnumerable<T> Find(Func<T, bool> predicate);
+        Task Create(T item);
         void Update(T item);
-        void DeleteAsync(string id);
+        void Delete(string id);
     }
 }

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +16,11 @@ namespace DataAccessLayer.Models
         public string? Email { get; set; }
         public string? Password { get; set; }
         public int Elo { get; set; }
-        
+        public bool IsSearching { get; set; }
+        public string? ProfilePhotoScr { get; set; }
+
+        public DateTime? RegisterDate { get; set; }
+        public ICollection<UserBattle>? UserBattle { get; set; }
+
     }
 }

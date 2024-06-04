@@ -3,7 +3,8 @@ using DataAccessLayer.Exceptions;
 using DataAccessLayer.Interfaces;
 using DataAccessLayer.Models;
 using Microsoft.EntityFrameworkCore;
-using System.Linq;
+using Task = System.Threading.Tasks.Task;
+
 namespace DataAccessLayer.Ropositories
 {
 
@@ -16,58 +17,49 @@ namespace DataAccessLayer.Ropositories
             db = officeDbContext;
         }
 
-
-        public async Task<IEnumerable<User>> FindAsync(Func<User, bool> predicate)
+        public IEnumerable<User> Find(Func<User, bool> predicate)
         {
-            return await Task.Run(() => db.Users.Where(predicate).ToList());
+            return db.Users.Where(predicate);
         }
 
-        public async Task CreateAsync(User item)
+        public async Task Create(User item)
         {
             db.Users.Add(item);
             await db.SaveChangesAsync();
         }
 
-        public async void DeleteAsync(string id)
+        public void Delete(string id)
         {
             var deletedUser = db.Users.Find(id);
-            if (deletedUser == null) _ = new EntryNotFoundException($"Entity {typeof(User).Name} not found!"); 
-            else
-            {
-                db.Users.Remove(deletedUser);
-                await db.SaveChangesAsync();
-            }
+            if (deletedUser == null) new EntryNotFoundException($"Entity {typeof(User).Name} not found!");
+            else db.Users.Remove(deletedUser);
         }
-        public async Task<IEnumerable<User>> FindActiveNearEloAsync(int elo, int range)
+
+        public IEnumerable<User> FindActiveNearElo(int elo, int range)
         {
-            return await Task.Run(() =>
-            {
-                return db.Users.FromSqlRaw("SELECT * FROM Users WHERE Elo BETWEEN {0} AND {1}", elo - range, elo + range);
-            });
+            return db.Users.FromSqlRaw("SELECT * FROM Users WHERE Elo BETWEEN {0} AND {1}", elo - range, elo + range);
         }
 
-
-        public async Task<User> GetAsync(string id)
+        public User Get(string id)
         {
-            var user = await db.Users.FindAsync(id);
-            return user ?? throw new EntryNotFoundException($"Entity {typeof(User).Name} not found!");
+            var user = db.Users.Find(id);
+            if (user == null) throw new EntryNotFoundException($"Entity {typeof(User).Name} not found!");
+            return user;
         }
-
 
         public void Update(User item)
         {
             db.Entry(item).State = EntityState.Modified; 
         }
-
-        public async Task<IEnumerable<User>> GetAllAsync()
+        
+        public IEnumerable<User> GetAll()
         {
-            return await Task.Run(() => db.Users);
+            return db.Users;
         }
-
-
-        public Task<User> GetByUsernamePasswordAsync(string username, string hashedPassword)
+        
+        public User GetByUsernamePassword(string username, string hashedPassword)
         {
-            return db.Users.FirstOrDefaultAsync(u => u.UserName == username && u.Password == hashedPassword);
+            return db.Users.FirstOrDefault(u => u.UserName == username && u.Password == hashedPassword);
         }
     }
 }
