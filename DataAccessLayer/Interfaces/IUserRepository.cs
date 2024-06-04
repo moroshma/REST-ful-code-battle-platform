@@ -10,7 +10,7 @@ namespace DataAccessLayer.Interfaces
 {
     // Интерфейс для работы с моделью Пользователя. Он вообще нужен? 
     
-    public interface IUserRepository : IRepository<User>
+    interface IUserRepository : IRepository<User>
     {
         IEnumerable<User> FindActiveNearElo(int elo, int range);
 
