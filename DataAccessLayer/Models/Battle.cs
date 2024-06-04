@@ -10,17 +10,12 @@ namespace DataAccessLayer.Models
 {
     public class Battle
     {
-        public Guid? ID { get; set; }
-        public Guid? FirstId { get; set; }
-        public Guid? SecondId { get; set; }
-        public Guid? WinerId { get; set; }
-        public Guid? TaskId { get; set; }
         public Guid? BattleId { get; set; }
         public string? Language { get; set; }    
-        public DateTime? BattleData { get; set; }
+        public DateTime? BattleDate { get; set; }
         public User? FirstUser { get; set; }
         public User? SecondUser { get; set; }
-        public User? Winer { get; set; }
+        public User? Winner { get; set; }
         public Task? Task { get; set; }
         public ICollection<UserBattle>? UserBattle { get; set; }
     }

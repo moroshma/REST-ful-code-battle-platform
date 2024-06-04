@@ -10,5 +10,6 @@ namespace DataAccessLayer.Models
     {
         public Guid? TestCaseId { get; set; }
         public string? Test { get; set; }
+        public Task? Task { get; set; }
     }
 }
