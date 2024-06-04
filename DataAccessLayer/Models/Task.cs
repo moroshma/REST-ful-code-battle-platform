@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Models
 {
-    class Task
+    public class Task
     {
         public int? TaskId { get; set; }
         public string? TestCaseId { get; set; }

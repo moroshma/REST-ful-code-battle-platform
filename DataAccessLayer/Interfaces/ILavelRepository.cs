@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Interfaces
 {
-    interface ILavelRepository : IRepository<Level>
+    public interface ILavelRepository : IRepository<Level>
     {
     }
 }

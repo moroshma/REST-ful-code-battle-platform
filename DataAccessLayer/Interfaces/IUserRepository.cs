@@ -9,8 +9,8 @@ using DataAccessLayer.EF;
 namespace DataAccessLayer.Interfaces
 {
     // Интерфейс для работы с моделью Пользователя. Он вообще нужен? 
-    
-    interface IUserRepository : IRepository<User>
+
+    public interface IUserRepository : IRepository<User>
     {
         IEnumerable<User> FindActiveNearElo(int elo, int range);
 

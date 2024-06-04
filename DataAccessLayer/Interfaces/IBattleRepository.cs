@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Interfaces
 {
-    interface IBattleRepository : IRepository<Battle>
+    public interface IBattleRepository : IRepository<Battle>
     {
     }
 }

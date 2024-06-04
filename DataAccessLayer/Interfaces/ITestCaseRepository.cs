@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Interfaces
 {
-    interface ITestCaseRepository : IRepository<TestCase>
+    public interface ITestCaseRepository : IRepository<TestCase>
     {
     }
 }

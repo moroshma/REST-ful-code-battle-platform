@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Models
 {
-    class UserBattle
+    public class UserBattle
     {
         public Guid? UserID { get; set; }
         public Guid? BattleID { get; set; }

@@ -9,7 +9,7 @@ using DataAccessLayer.Models;
 
 namespace DataAccessLayer.Models
 {
-    class User
+    public class User
     {
         public Guid? ID { get; set; }
         public string? UserName { get; set; }

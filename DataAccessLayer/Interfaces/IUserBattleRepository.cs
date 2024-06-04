@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Interfaces
 {
-    interface IUserBattleRepository : IRepository<UserBattle>
+    public interface IUserBattleRepository : IRepository<UserBattle>
     {
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Models
 {
-    class Battle
+    public class Battle
     {
         public Guid? ID { get; set; }
         public Guid? FirstId { get; set; }

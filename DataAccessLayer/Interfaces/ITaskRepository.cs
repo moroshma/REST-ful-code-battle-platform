@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Interfaces
 {
-    interface ITaskRepository : IRepository<Models.Task>
+    public interface ITaskRepository : IRepository<Models.Task>
     {
     }
 }
