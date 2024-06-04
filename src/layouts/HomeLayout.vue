@@ -30,7 +30,7 @@ function logOut() {
 <template>
     <div class="container" @mousemove="throttleUpdateMouseEvent">
         <HeaderView :onSwitch-view="replaceActiveTab" :onLog-out="logOut" :mouseEvent="mouseEvent" />
-        <div style="padding-top: 100px;">
+        <div style="padding-top: 150px;">
             <component :is="activeView" />
         </div>
         <FooterView />
