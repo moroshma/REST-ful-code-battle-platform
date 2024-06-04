@@ -8,7 +8,9 @@ namespace DataAccessLayer.Models
 {
     public class Solution
     {
-        public string? SolutionId { get; set; }
+        public Guid? SolutionId { get; set; }
         public string? CaseSolution { get; set; }
+        public Guid? TaskId { get; set; }
+        public Task? Task { get; set; }
     }
 }

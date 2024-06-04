@@ -14,7 +14,7 @@ namespace DataAccessLayer.Models
         public Guid? FirstId { get; set; }
         public Guid? SecondId { get; set; }
         public Guid? WinerId { get; set; }
-        public int? TaskId { get; set; }
+        public Guid? TaskId { get; set; }
         public Guid? BattleId { get; set; }
         public string? Language { get; set; }    
         public DateTime? BattleData { get; set; }
