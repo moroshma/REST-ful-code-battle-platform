@@ -9,6 +9,6 @@ namespace DataAccessLayer.Models
     public class TestCase
     {
         public int? TestCaseId { get; set; }
-        public string? Test_Case { get; set; }
+        public string? Test { get; set; }
     }
 }

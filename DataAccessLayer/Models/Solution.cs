@@ -9,6 +9,6 @@ namespace DataAccessLayer.Models
     public class Solution
     {
         public string? SolutionId { get; set; }
-        public string? solution { get; set; }
+        public string? CaseSolution { get; set; }
     }
 }

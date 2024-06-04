@@ -20,7 +20,7 @@ namespace DataAccessLayer.Models
         public string? ProfilePhotoScr { get; set; }
 
         public DateTime? RegisterDate { get; set; }
-        public ICollection<UserBattle>? Battles { get; set; }
+        public ICollection<UserBattle>? UserBattle { get; set; }
 
     }
 }
