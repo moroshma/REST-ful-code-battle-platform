@@ -25,7 +25,7 @@ function submit() {
                     <el-input v-model="formValues.password" style="width: 240px" type="password"
                         placeholder="Please input password" show-password />
 
-                    <el-button type="plain" @click="submit">
+                    <el-button @click="submit">
                         Login
                     </el-button>
                 </div>
@@ -33,10 +33,9 @@ function submit() {
                     <el-input v-model="formValues.email" style="width: 240px" placeholder="Please input Email" />
                     <el-input v-model="formValues.password" style="width: 240px" type="password"
                         placeholder="Please input password" show-password />
-                    <el-input style="width: 240px" type="password"
-                        placeholder="Please input password" show-password />
+                    <el-input style="width: 240px" type="password" placeholder="Please input password" show-password />
 
-                    <el-button type="plain" @click="submit">
+                    <el-button @click="submit">
                         Register
                     </el-button>
                 </div>
@@ -70,13 +69,40 @@ form .el-input__inner {
     transition: all 0.5s;
 
     border: 50px solid transparent;
-    border-top: 70px solid #101d1d;
+    border-top: 70px solid rgba(34, 34, 34, 0.9);
 
-    border-bottom: 70px solid #101d1d;
-
+    border-bottom: 70px solid rgba(34, 34, 34, 0.9);
+    /* animation: opacityAnim 6s infinite; */
 }
 
 .auth_card input {
     margin-bottom: 5px;
+}
+
+@keyframes opacityAnim {
+    0% {
+        border-top: 70px solid rgba(34, 34, 34, 0.9);
+        border-bottom: 70px solid rgba(34, 34, 34, 0.9);    
+    }
+
+    25%{
+        border-bottom-color:  rgba(34, 34, 34, 0.3);
+        border-top-color:  rgba(34, 34, 34, 0.3);
+    }
+
+    50% {
+        border-top: 60px solid rgba(34, 34, 34, 0.9);
+        border-bottom: 60px solid rgba(34, 34, 34, 0.9);
+    }
+
+    75%{
+        border-top-color:  rgba(34, 34, 34, 0.3);
+        border-bottom-color:  rgba(34, 34, 34, 0.3);
+    }
+
+    100% {
+        border-top: 70px solid rgba(34, 34, 34, 0.9);
+        border-bottom: 70px solid rgba(34, 34, 34, 0.9);
+    }
 }
 </style>

@@ -103,9 +103,10 @@ function logOut(){
 <style scoped>
 header {
     margin-top: 1%;
-    position: fixed;
+    position: absolute;
     width: 100%;
     box-shadow: 5px 5px 10px 20px rgb(0, 0, 0,0.3);
+    z-index: 10;
 }
 
 header nav {

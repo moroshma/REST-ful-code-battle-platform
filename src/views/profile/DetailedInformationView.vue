@@ -8,7 +8,9 @@ import CompletedGames from './CompletedGames.vue';
         <el-tab-pane label="Statistics">
             <StatisticsView />
         </el-tab-pane>
-        <el-tab-pane style="overflow: auto; max-height: 700px" label="Completed games"><CompletedGames/></el-tab-pane>
+        <el-tab-pane style="overflow: auto; max-height: 350px" label="Completed games">
+            <CompletedGames />
+        </el-tab-pane>
     </el-tabs>
 </template>
 
