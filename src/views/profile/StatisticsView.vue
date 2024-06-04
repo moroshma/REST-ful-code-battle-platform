@@ -7,8 +7,8 @@ const eloRating = ref(2400)
 <template>
     <div>
         <ul>
-            <li>Кол-во игр: {{ gamesPlayed }}</li>
-            <li>ELO: {{ eloRating }}</li>
+            <li> <span class="statistic">{{ gamesPlayed }}</span> <br> Кол-во игр</li>
+            <li> <span class="statistic">{{ eloRating }}</span> <br> ELO</li>
         </ul>
     </div>
 </template>
@@ -17,5 +17,14 @@ const eloRating = ref(2400)
     ul{
         display: flex;
         justify-content: space-around;
+    }
+
+    ul li{
+        text-align: center;
+    }
+
+    .statistic{
+        font-weight: bold;
+        font-size: 24px;
     }
 </style>

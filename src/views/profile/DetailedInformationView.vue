@@ -1,5 +1,6 @@
 <script setup>
 import StatisticsView from './StatisticsView.vue';
+import CompletedGames from './CompletedGames.vue';
 </script>
 
 <template>
@@ -7,7 +8,7 @@ import StatisticsView from './StatisticsView.vue';
         <el-tab-pane label="Statistics">
             <StatisticsView />
         </el-tab-pane>
-        <el-tab-pane label="Games">Games</el-tab-pane>
+        <el-tab-pane style="overflow: auto; max-height: 700px" label="Completed games"><CompletedGames/></el-tab-pane>
     </el-tabs>
 </template>
 
