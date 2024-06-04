@@ -11,7 +11,7 @@ namespace DataAccessLayer.Models
     public class Battle
     {
         public Guid? BattleId { get; set; }
-        public string? Language { get; set; }    
+        public string? Language { get; set; } = "Go";
         public DateTime? BattleDate { get; set; }
         public User? FirstUser { get; set; }
         public User? SecondUser { get; set; }

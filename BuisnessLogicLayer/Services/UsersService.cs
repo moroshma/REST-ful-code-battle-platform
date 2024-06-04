@@ -2,6 +2,7 @@ using codeBattleService.BusinessLogicLayer.Interfaces;
 using DataAccessLayer.Interfaces;
 using DataAccessLayer.Models;
 using Infrastructure;
+using Task = System.Threading.Tasks.Task;
 
 
 namespace codeBattleService.BusinessLogicLayer.Services;
@@ -40,19 +41,19 @@ public class UsersService : IUsersService {
         };
 
         // Добавляем нового пользователя в репозиторий
-        await userRepository.CreateAsync(user);
+        await userRepository.Create(user);
 
         // Возвращаем идентификатор нового пользователя
         return user.ID.Value;
     }
 
-    public async Task<string> Get(string username, string password)
+    public Task<string> Get(string username, string password)
     {
         PasswordHasher passwordHasher = new PasswordHasher();
         var hashedPassword = password;//passwordHasher.Generate(password);
         
         // Получаем пользователя по имени
-        var user = await userRepository.GetByUsernamePasswordAsync(username, hashedPassword);
+        var user =  userRepository.GetByUsernamePassword(username, hashedPassword);
         
         // Проверяем, существует ли пользователь с таким именем и паролем
         if (user == null)
@@ -61,7 +62,7 @@ public class UsersService : IUsersService {
         }
         var token =  _jwtProvider.GenerateToken(user);
         
-        return token;
+        return Task.FromResult(token);
     }
 }
 
