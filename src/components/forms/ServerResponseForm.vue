@@ -1,8 +1,7 @@
 <template>
     <div class="response">
-        loading... <br>
-        server response if not ok <br>
+        loading... <br><br>
 
-        <button @click="$emit('submit')">go to back</button>
+        <el-button @click="$emit('submit')"> Back</el-button>
     </div>
 </template>

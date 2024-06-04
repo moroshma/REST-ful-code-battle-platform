@@ -31,11 +31,11 @@ async function auth() {
 </script>
 
 <template>
-    <div class="auth_form">
+    <div class="auth_form" :style="{ 'justify-content': type === 'password' ? 'left' : 'end' }">
         <Transition name="flightCard">
             <AuthCard v-if="!formSubmitted" @submit="auth" :type="type" :rightPosition="positionRight" />
         </Transition>
-        <div :style="{ 'float': type === 'password' ? 'left' : 'right' }" class="second_form">
+        <div  class="second_form">
             <ServerResponseForm @submit="formSubmitted = false" v-if="formSubmitted" />
             <ReferralForm v-else :label="label" :textButton="textButtonRefferal" @submit="changeAuthCard" />
         </div>
@@ -43,21 +43,18 @@ async function auth() {
 </template>
 
 <style scoped>
-.response {
-    float: right;
-}
-
 .auth_form {
     background-color: rgba(34, 34, 34, 0.3);
     width: 50%;
     min-width: 350px;
     height: 250px;
-
+    display: flex;
     border-bottom-right-radius: 10px;
 
     backdrop-filter: blur(20px);
 
     box-shadow: inset 0px 0px 20px 0px rgba(146, 146, 146, 0.5);
+
 }
 
 .second_form {
@@ -67,7 +64,18 @@ async function auth() {
 }
 
 .referral_form{
-    margin: 0 auto;
+    width: 100%;
     align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.response{
+    width: 100%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 </style>

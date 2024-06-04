@@ -5,7 +5,7 @@ const props = defineProps<IAuthReferralForm>()
 </script>
 
 <template>
-    <form @click.prevent style="display: block;" class="referral_form">
+    <form @click.prevent class="referral_form">
         <div class="label">{{ props.label }}</div>
         <el-button @click="$emit('submit')"> {{ props.textButton }}</el-button>
     </form>

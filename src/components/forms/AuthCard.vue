@@ -33,7 +33,7 @@ function submit() {
                     <el-input v-model="formValues.email" style="width: 240px" placeholder="Please input Email" />
                     <el-input v-model="formValues.password" style="width: 240px" type="password"
                         placeholder="Please input password" show-password />
-                    <el-input style="width: 240px" type="password" placeholder="Please input password" show-password />
+                    <el-input style="width: 240px" type="password" placeholder="Please confirm password" show-password />
 
                     <el-button @click="submit">
                         Register
