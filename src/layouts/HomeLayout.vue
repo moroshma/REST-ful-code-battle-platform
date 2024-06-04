@@ -21,8 +21,6 @@ function replaceActiveTab(component: any) {
 }
 
 function logOut() {
-    console.log('out');
-    
     router.push({
         name: 'auth'
     })

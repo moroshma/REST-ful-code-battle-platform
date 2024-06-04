@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { computed, ref, shallowRef, watchEffect } from 'vue';
 import type { IBoxShadow, IMouseCoords } from '@/interfaces/homePage/interfaces'
-import BattlesView from '@/views/BattlesView.vue'
-import ProfileView from '@/views/ProfileView.vue'
+import BattlesView from '@/views/battles/BattlesView.vue'
+import ProfileView from '@/views/profile/ProfileView.vue'
 
 const emit = defineEmits(['switch-view', 'log-out'])
 
@@ -68,18 +68,16 @@ function getMouseCoordsRelativeToTheCenter(mouseEvent: MouseEvent | undefined): 
 
 function getBoxShadowStyle(mouseCoords: IMouseCoords): IBoxShadow {
     const ratio = (mouseCoords.y / document.body.clientHeight) * 700
-    return { ...mouseCoords, y: ratio, opacity: 0.9, blur: 600 }
+    return { ...mouseCoords, y: ratio, opacity: 0.5, blur: 600 }
 }
 
 function setBoxShadowStyle(obj: IBoxShadow): void {
     const { x, y, blur, opacity } = obj
     const ratio = 7
-    boxShadowStyle.value = ` ${x / ratio}px ${y / ratio}px ${blur}px 60px rgb(80, 30, 120, ${opacity})`
+    boxShadowStyle.value = ` ${x / ratio}px ${y / ratio}px ${blur}px 60px rgb(140, 80, 170, ${opacity})`
 }
 
 function logOut(){
-    console.log('out');
-    
     emit('log-out')
 }
 </script>
@@ -87,18 +85,16 @@ function logOut(){
 <template>
     <header>
         <nav :style="{ 'box-shadow': boxShadowStyle }">
-            <ul>
+            <ul >
                 <li v-for="(button, index) in headerButtons" :key="button.type + button.text">
-                    <el-button :type="button.type" :round="activeTabIndex === index" @click="replaceActiveTab(index)">
+                    <el-button style="margin-right: 20px;" :type="button.type" :round="activeTabIndex === index" @click="replaceActiveTab(index)">
                         {{ button.text }}
                     </el-button>
                 </li>
             </ul>
-            <ul>
                 <el-button type="warning" @click="logOut">
                     Log out
                 </el-button>
-            </ul>
         </nav>
 
     </header>
@@ -113,21 +109,21 @@ header {
 
 header nav {
     transition: box-shadow 0.1s;
-    width: 50%;
+    width: 60%;
     margin: 0 auto;
     display: flex;
-    height: 60px;
+    height: 80px;
     background-color: var(--general-style);
+    border-radius: 30px;
+    align-items: center;
+    justify-content: space-around
 }
 
 header ul {
-
-    width: 100%;
+    width: 30%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-
-
     border-radius: 5px;
 }
 </style>
