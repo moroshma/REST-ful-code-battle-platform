@@ -9,7 +9,7 @@ namespace DataAccessLayer.Models
     public class Level
     {
         public Guid? LevelId { get; set; }
-        public string? TaskLevel { get; set; }
+        public string? Value { get; set; }
         public ICollection<Task>? Task { get; set; }
     }
 }
