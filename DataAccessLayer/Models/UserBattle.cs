@@ -10,5 +10,7 @@ namespace DataAccessLayer.Models
     {
         public Guid? UserID { get; set; }
         public Guid? BattleID { get; set; }
+        public User? User { get; set; }
+        public Battle? Battle { get; set; }
     }
 }

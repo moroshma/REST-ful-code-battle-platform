@@ -22,6 +22,6 @@ namespace DataAccessLayer.Models
         public User? SecondUser { get; set; }
         public User? Winer { get; set; }
         public Task? Task { get; set; }
-        public ICollection<UserBattle>? UserBattles { get; set; }
+        public ICollection<UserBattle>? UserBattle { get; set; }
     }
 }

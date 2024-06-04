@@ -36,5 +36,20 @@ namespace DataAccessLayer.EF
                 optionsBuilder.UseNpgsql( "Server=localhost;Username=postgres;Database=postgres;Port=5432;Password=root;" );
             }
         }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<UserBattle>()
+                .HasKey(bg => new { bg.UserID, bg.BattleID });
+
+            modelBuilder.Entity<UserBattle>()
+                .HasOne(bg => bg.User)
+                .WithMany(b => b.UserBattle)
+                .HasForeignKey(bg => bg.UserID);
+
+            modelBuilder.Entity<UserBattle>()
+                .HasOne(bg => bg.Battle)
+                .WithMany(g => g.UserBattle)
+                .HasForeignKey(bg => bg.BattleID);
+        }
     }
 }
