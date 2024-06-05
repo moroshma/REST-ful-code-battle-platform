@@ -3572,19 +3572,19 @@
     ]
   },
   "packageFolders": {
-    "/home/moroshma/.nuget/packages/": {}
+    "/home/romani/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/BuisnessLogicLayer/BuisnessLogicLayer.csproj",
+      "projectUniqueName": "/home/romani/RiderProjects/REST-ful-code-battle-platform/BuisnessLogicLayer/BuisnessLogicLayer.csproj",
       "projectName": "BuisnessLogicLayer",
-      "projectPath": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/BuisnessLogicLayer/BuisnessLogicLayer.csproj",
-      "packagesPath": "/home/moroshma/.nuget/packages/",
-      "outputPath": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/BuisnessLogicLayer/obj/",
+      "projectPath": "/home/romani/RiderProjects/REST-ful-code-battle-platform/BuisnessLogicLayer/BuisnessLogicLayer.csproj",
+      "packagesPath": "/home/romani/.nuget/packages/",
+      "outputPath": "/home/romani/RiderProjects/REST-ful-code-battle-platform/BuisnessLogicLayer/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/moroshma/.nuget/NuGet/NuGet.Config"
+        "/home/romani/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -3596,11 +3596,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/DataAccessLayer/DataAccessLayer.csproj": {
-              "projectPath": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/DataAccessLayer/DataAccessLayer.csproj"
+            "/home/romani/RiderProjects/REST-ful-code-battle-platform/DataAccessLayer/DataAccessLayer.csproj": {
+              "projectPath": "/home/romani/RiderProjects/REST-ful-code-battle-platform/DataAccessLayer/DataAccessLayer.csproj"
             },
-            "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/Infrastructeres/Infrastructeres.csproj": {
-              "projectPath": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/Infrastructeres/Infrastructeres.csproj"
+            "/home/romani/RiderProjects/REST-ful-code-battle-platform/Infrastructeres/Infrastructeres.csproj": {
+              "projectPath": "/home/romani/RiderProjects/REST-ful-code-battle-platform/Infrastructeres/Infrastructeres.csproj"
             }
           }
         }
@@ -3639,12 +3639,18 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[8.0.5, 8.0.5]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/current/sdk/8.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.105/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
