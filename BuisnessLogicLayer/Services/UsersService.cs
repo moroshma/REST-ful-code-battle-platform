@@ -20,12 +20,13 @@ public class UsersService : IUsersService {
     public async Task<Guid> Add(string username, string email, string password)
     {
         PasswordHasher passwordHasher = new PasswordHasher();
+        
         // Проверяем, существует ли уже пользователь с таким именем или электронной почтой
-        //var existingUser = await userRepository.GetByUsernameOrEmail(username, email);
-        //if (existingUser != null)
-        //{
-           // throw new Exception("User with this username or email already exists.");
-        //}
+        var existingUser = userRepository.GetByUsernameOrEmail(username, email);
+        if (existingUser != null)
+        {
+           throw new Exception("User with this username or email already exists.");
+        }
 
         // Хешируем пароль
         var hashedPassword = password;//passwordHasher.Generate(password);

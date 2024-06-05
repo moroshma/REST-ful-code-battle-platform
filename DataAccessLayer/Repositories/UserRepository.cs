@@ -61,6 +61,11 @@ namespace DataAccessLayer.Ropositories
         {
             return db.Users.FirstOrDefault(u => u.UserName == username && u.Password == hashedPassword);
         }
+
+        public User GetByUsernameOrEmail(string username, string email)
+        {
+            return db.Users.FirstOrDefault(u => u.UserName == username || u.Email == email);
+        }
     }
 }
    

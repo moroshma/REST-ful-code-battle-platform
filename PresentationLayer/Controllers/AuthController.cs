@@ -16,22 +16,45 @@ public class AuthController : Controller
     {
         _userService = userService;
     }
-
+    
+    
+    
     [HttpPost]
     [Route("Register")]
     public async Task<IActionResult> Register([FromBody] RegisterForm registerForm)
     {
-        var req = await _userService.Add(registerForm.UserName, registerForm.Email, registerForm.Password);
-        return Ok(new
+        
+        if (!ModelState.IsValid)
         {
-            UserId = req
-        });
+            return BadRequest(ModelState);
+        }
+        try
+        {
+            
+            
+            var req = await _userService.Add(registerForm.UserName, registerForm.Email, registerForm.Password);
+            return Ok(new
+            {
+                UserId = req
+            });
+        }
+        catch (Exception e)
+        {
+            return Conflict(e.Message);
+            
+        }
+        
     }
 
     [HttpPost]
     [Route("Login")]
     public async Task<IActionResult> Login([FromBody] LoginForm registerForm)
     {
+        if (!ModelState.IsValid)
+        {
+            return BadRequest(ModelState);
+        }
+        
         try
         {
             var req = await _userService.Get(registerForm.UserName, registerForm.Password);
