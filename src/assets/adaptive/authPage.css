@@ -1,0 +1,5 @@
+@media screen and (max-width: 900px) {
+   body .auth_form .auth_card{
+    width: 200px;
+   }
+  }

@@ -1,0 +1,42 @@
+@keyframes cardFlyingOutOfForm {
+    0% {
+        transform: perspective(250px) rotateX(80deg) scale(0.1) translateY(-400px) ;
+        opacity: 0;
+    }
+    50% {
+        transform: perspective(350px) rotateX(75deg) ;
+        opacity: 0.8;
+    }
+    100% {
+        transform: perspective(600px) rotateX(0deg) translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes puttingCardInTheForm {
+    0% {
+        transform: perspective(600px) rotateX(0deg) translateY(0px);
+        opacity: 1;
+    }
+
+    50% {
+        transform: perspective(350px) rotateX(75deg);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: perspective(250px) rotateX(80deg) scale(0.1) translateY(-400px);
+        opacity: 0;
+    }
+}
+
+.flightCard-enter-active {
+    transition: all 0.2s ease;
+    animation: cardFlyingOutOfForm 1.2s forwards;
+
+}
+
+.flightCard-leave-active {
+    transition: all 0.2s ease;
+    animation: puttingCardInTheForm 1.2s forwards;
+}
