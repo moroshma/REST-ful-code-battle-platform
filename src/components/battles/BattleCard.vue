@@ -10,9 +10,7 @@
             </div>
 
             <div class="battle_card__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quasi cumque harum deserunt, voluptatum
-                molestiae quae labore autem, excepturi fuga aspernatur cupiditate vitae! Nihil voluptatibus a similique
-                in veniam voluptates.
+                Режим "Сражение программистов" представляет собой захватывающий и динамичный специальный режим, в котором участники соревнуются в быстроте и точности решения задач на языке программирования.
             </div>
             <el-button> Battle</el-button>
         </div>
@@ -25,7 +23,8 @@
     background-color: var(--general-style);
     width: 30%;
     margin: 3%;
-   
+    font-size: 16px;
+    border-radius: 10px;
 }
 
 .battle_card_container{
