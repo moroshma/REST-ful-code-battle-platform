@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer; // Add this line
 using Microsoft.AspNetCore.Authentication.OAuth;
 using Microsoft.AspNetCore.CookiePolicy;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.IdentityModel.Tokens;
 using Npgsql;
 using SecretStore.Extensions;
@@ -71,6 +72,20 @@ if (app.Environment.IsDevelopment())
 app.UseAuthentication();
 app.UseAuthentication();
 app.UseHttpsRedirection();
+
+
+var fileServerOptions = new FileServerOptions
+{
+    RequestPath = "",
+    FileProvider = new PhysicalFileProvider(
+        Path.Combine(Directory.GetCurrentDirectory(), "../dist")),
+    EnableDefaultFiles = true,
+    EnableDirectoryBrowsing = false
+};
+
+app.UseFileServer(fileServerOptions);
+
+app.UseRouting();
 
 app.UseAuthorization();
 
