@@ -32,6 +32,7 @@ namespace DataAccessLayer.EF
         public DbSet<Task> Task { get; set; }
         public DbSet<TestCase> TestCase { get; set; }
         public DbSet<UserBattle> UserBattle { get; set; }
+        
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

@@ -28,7 +28,7 @@ namespace DataAccessLayer.Ropositories
             await db.SaveChangesAsync();
         }
 
-        public void Delete(string id)
+        public void Delete(Guid id)
         {
             var deletedUser = db.Users.Find(id);
             if (deletedUser == null) new EntryNotFoundException($"Entity {typeof(User).Name} not found!");
@@ -40,9 +40,9 @@ namespace DataAccessLayer.Ropositories
             return db.Users.FromSqlRaw("SELECT * FROM Users WHERE Elo BETWEEN {0} AND {1}", elo - range, elo + range);
         }
 
-        public User Get(string id)
+        public async Task<User> Get(Guid id)
         {
-            var user = db.Users.Find(id);
+            var user = await db.Users.FindAsync(id);
             if (user == null) throw new EntryNotFoundException($"Entity {typeof(User).Name} not found!");
             return user;
         }
