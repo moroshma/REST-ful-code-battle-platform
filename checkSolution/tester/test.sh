@@ -1,0 +1,1 @@
+hey -n 1000 -c 100 -m POST -D ./payload.json   http://localhost:8089/checkSolution >post_product.txt #post product

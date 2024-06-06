@@ -1,6 +1,9 @@
 ﻿services:
-  codebattleservice:
-    image: codebattleservice
+  checksolution:
+    image: checksolution
     build:
-      context: .
-      dockerfile: codeBattleService/Dockerfile
+      context: ./checkSolution
+      dockerfile: Dockerfile
+    ports:
+      - "8089:8089" # Проброс порта наружу
+    restart: unless-stopped
