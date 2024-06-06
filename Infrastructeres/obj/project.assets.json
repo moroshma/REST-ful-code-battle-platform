@@ -3550,32 +3550,34 @@
     ]
   },
   "packageFolders": {
-    "/home/moroshma/.nuget/packages/": {}
+    "C:\\Users\\Maks\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/Infrastructeres/Infrastructeres.csproj",
+      "projectUniqueName": "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\Infrastructeres\\Infrastructeres.csproj",
       "projectName": "Infrastructeres",
-      "projectPath": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/Infrastructeres/Infrastructeres.csproj",
-      "packagesPath": "/home/moroshma/.nuget/packages/",
-      "outputPath": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/Infrastructeres/obj/",
+      "projectPath": "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\Infrastructeres\\Infrastructeres.csproj",
+      "packagesPath": "C:\\Users\\Maks\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\Infrastructeres\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/moroshma/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Maks\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/DataAccessLayer/DataAccessLayer.csproj": {
-              "projectPath": "/home/moroshma/RiderProjects/REST-ful-code-battle-platform/DataAccessLayer/DataAccessLayer.csproj"
+            "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\DataAccessLayer\\DataAccessLayer.csproj": {
+              "projectPath": "C:\\Users\\Maks\\Desktop\\REST-ful-code-battle-platform\\DataAccessLayer\\DataAccessLayer.csproj"
             }
           }
         }
@@ -3627,7 +3629,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/current/sdk/8.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
